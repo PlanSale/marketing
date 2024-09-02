@@ -698,10 +698,6 @@ body {
   #PROJECT
 \*-----------------------------------*/
 
-/*-----------------------------------*\
-  #PROJECT
-\*-----------------------------------*/
-
 .project {
   background-color: var(--ghost-white);
   max-width: 1200px;
@@ -747,11 +743,9 @@ body {
   border-radius: var(--radius-15);
   overflow: hidden;
   margin: 10px;
-  max-width: 350px; /* 限制每个卡片的最大宽度为350px */
 }
 
 .project-card .card-banner img {
-  width: 100%; /* 确保图片适应卡片宽度 */
   transition: var(--transition-2);
 }
 
@@ -763,31 +757,44 @@ body {
 .project-card .card-content {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% + 20px));
+  left: 15px;
+  right: 15px;
   background-color: var(--mustard);
   border-radius: var(--radius-10);
   padding: 20px 15px;
   text-align: center;
   opacity: 0;
+  transform: translateY(calc(-50% + 20px));
   transition: var(--transition-2);
-  width: calc(100% - 40px); /* 确保内容宽度适应卡片宽度 */
-  max-width: 90%; /* 确保内容不会超过卡片宽度 */
-}
-
-.project-card:is(:hover, :focus-within) .card-content {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-
-.project-card .card-title {
-  margin-block-end: 10px;
 }
 
 .project-card .card-tag {
   color: var(--raisin-black-1);
   font-size: var(--fs-9);
 }
+
+.project-card:is(:hover, :focus-within) .card-content {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+
+  /**
+   * PROJECT
+   */
+
+   .project-card .card-content {
+    max-width: max-content;
+    width: calc(100% - 40px);
+    left: 50%;
+    right: auto;
+    padding: 50px 80px;
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+
+  .project-card:is(:hover, :focus-within) .card-content { transform: translate(-50%, -50%); }
+
+  .project-card .card-title { margin-block-end: 10px; }
 
 
 
