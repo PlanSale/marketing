@@ -579,7 +579,79 @@ body {
 .service .link-card:is(:hover, :focus) ion-icon { color: hsl(var(--color)); }
 
 
+/*-----------------------------------*\
+  #projects
+\*-----------------------------------*/
 
+.projects { background-color: var(--ghost-white); }
+
+.projects .section-title { margin-block: 30px 60px; }
+
+.projects-card,
+.projects .link-card {
+  padding: 45px;
+  border-radius: var(--radius-20);
+}
+
+.projects-card {
+  height: 100%;
+  background-color: var(--white);
+  padding-block-end: 40px;
+  border-block-end: 3px solid transparent;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
+
+.projects-card:is(:hover, :focus-within) { border-color: hsl(var(--color)); }
+
+.projects-card .card-icon {
+  max-width: max-content;
+  padding: 15px;
+  border-radius: var(--radius-8);
+  background-color: hsla(var(--color), 0.15);
+  margin-block-end: 25px;
+  transition: var(--transition-2);
+}
+
+.projects-card:is(:hover, :focus-within) .card-icon { transform: rotateY(0.5turn); }
+
+.projects-card .card-title { transition: var(--transition-1); }
+
+.projects-card .card-title:is(:hover, :focus-within) { color: hsl(var(--color)); }
+
+.projects .link-card {
+  background-color: hsla(var(--color), 0.15);
+  text-align: center;
+}
+
+.projects .link-card .span {
+  color: var(--raisin-black-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin-block-end: 20px;
+  transition: var(--transition-1);
+}
+
+.projects .link-card:is(:hover, :focus) .span { color: var(--majorelle-blue); }
+
+.projects .link-card ion-icon {
+  color: var(--majorelle-blue);
+  font-size: 150px;
+  transform: rotate(-45deg);
+  margin: -25px auto;
+  transition: var(--transition-1);
+}
+
+.projects .link-card:is(:hover, :focus) ion-icon { color: hsl(var(--color)); }
+
+.projects-card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 
 /*-----------------------------------*\
@@ -622,23 +694,33 @@ body {
 
 
 
+/*-----------------------------------*\
+  #PROJECT
+\*-----------------------------------*/
 
 /*-----------------------------------*\
   #PROJECT
 \*-----------------------------------*/
 
-.project { background-color: var(--ghost-white); }
+.project {
+  background-color: var(--ghost-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-.project .section-title { margin-block: 20px 60px; }
+.project .section-title {
+  margin-block: 20px 40px;
+}
 
 .filter-list {
-  max-width: 90%;
+  max-width: 80%;
   margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-block-end: 70px;
+  margin-block-end: 50px;
 }
 
 .filter-btn {
@@ -650,7 +732,9 @@ body {
   transition: var(--transition-1);
 }
 
-.filter-btn:is(:hover, :focus) { color: var(--raisin-black-1); }
+.filter-btn:is(:hover, :focus) {
+  color: var(--raisin-black-1);
+}
 
 .filter-btn.active {
   background-color: var(--white);
@@ -662,9 +746,14 @@ body {
   position: relative;
   border-radius: var(--radius-15);
   overflow: hidden;
+  margin: 10px;
+  max-width: 350px; /* 限制每个卡片的最大宽度为350px */
 }
 
-.project-card .card-banner img { transition: var(--transition-2); }
+.project-card .card-banner img {
+  width: 100%; /* 确保图片适应卡片宽度 */
+  transition: var(--transition-2);
+}
 
 .project-card:is(:hover, :focus-within) .card-banner img {
   transform: scale(1.1);
@@ -674,27 +763,31 @@ body {
 .project-card .card-content {
   position: absolute;
   top: 50%;
-  left: 20px;
-  right: 20px;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 20px));
   background-color: var(--mustard);
   border-radius: var(--radius-10);
-  padding: 30px 20px;
+  padding: 20px 15px;
   text-align: center;
   opacity: 0;
-  transform: translateY(calc(-50% + 20px));
   transition: var(--transition-2);
+  width: calc(100% - 40px); /* 确保内容宽度适应卡片宽度 */
+  max-width: 90%; /* 确保内容不会超过卡片宽度 */
+}
+
+.project-card:is(:hover, :focus-within) .card-content {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.project-card .card-title {
+  margin-block-end: 10px;
 }
 
 .project-card .card-tag {
   color: var(--raisin-black-1);
   font-size: var(--fs-9);
 }
-
-.project-card:is(:hover, :focus-within) .card-content {
-  opacity: 1;
-  transform: translateY(-50%);
-}
-
 
 
 
@@ -984,29 +1077,6 @@ body {
 
 
 
-  /**
-   * PROJECT
-   */
-
-  .project-card .card-content {
-    max-width: max-content;
-    width: calc(100% - 40px);
-    left: 50%;
-    right: auto;
-    padding: 50px 80px;
-    transform: translate(-50%, calc(-50% + 20px));
-  }
-
-  .project-card:is(:hover, :focus-within) .card-content { transform: translate(-50%, -50%); }
-
-  .project-card .card-title { margin-block-end: 10px; }
-
-}
-
-
-
-
-
 /**
  * responsive for large than 768px screen
  */
@@ -1035,7 +1105,17 @@ body {
 
   }
 
+  .section-description {
+    margin-bottom: 20px; /* 根据需要调整间距 */
+}
 
+.h2.section-title {
+    margin-bottom: 10px; /* 控制标题与段落之间的间距 */
+}
+
+.grid-list {
+    margin-top: 30px; /* 控制段落和项目列表之间的间距 */
+}
 
   /**
    * REUSED STYLE
