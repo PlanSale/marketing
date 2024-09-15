@@ -61,3 +61,20 @@ const headerActive = function () {
 }
 
 addEventOnElem(window, "scroll", headerActive);
+
+document.addEventListener('DOMContentLoaded', function () {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // 移除所有按钮的 active 状态
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+
+      // 为点击的按钮添加 active 状态
+      this.classList.add('active');
+    });
+  });
+});
+
+
+ 
