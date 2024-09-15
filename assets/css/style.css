@@ -1555,4 +1555,115 @@ body {
 
   .blog-card .card-title { --fs-4: 2.4rem; }
 
+
+/**
+   * Paypal 后面添加
+   */
+   .productcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px; /* 让左右内容靠近 */
+}
+
+.product-section {
+    flex: 1;
+    text-align: left; /* 使产品内容靠左显示 */
+    padding-left: 20px; /* 增加左边间距 */
+}
+
+.product-image {
+    margin-bottom: 10px;
+}
+
+.product-image img {
+    width: 50%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.productcontainer.paypal-button {
+    flex: 1;
+    max-width: 200px;
+}
+
+/* 针对iPad尺寸（768px - 992px） */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .productcontainer {
+        justify-content: flex-start; /* 左对齐布局 */
+    }
+
+    .product-image img {
+        width: 80%; /* 调整图片大小 */
+    }
+
+    .product-section {
+        padding-left: 30px; /* 增加左边间距 */
+    }
+
+    .paypal-button {
+
+      max-width: 300px; /* 调整PayPal按钮的最大宽度 */
+    }
+
+    .product-description {
+      font-size: 16px;
+      color: black;
+      margin-bottom: 20px;
+     }
+  
+    .product-title {
+      font-size: 24px;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+}
+
+/* 针对小屏幕 (宽度767px及以下) */
+@media screen and (max-width: 767px) {
+
+  .paypal-button {
+      width: 100%;
+      padding: 10px 0;
+  }
+  .paypal-button {
+
+        max-width: 100%; /* 小屏幕下按钮全宽 */
+        text-align: left; /* 保证按钮靠左对齐 */
+  }
+
+  .product-description {
+      font-size: 16px;
+      color: black;
+      margin-bottom: 20px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+}
+
+}
 }
