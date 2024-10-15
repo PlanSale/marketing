@@ -311,7 +311,7 @@ body {
 
 .grid-list {
   display: grid;
-  gap: 30px;
+  gap:25px;
 }
 
 .img-holder {
@@ -589,7 +589,7 @@ body {
 
 .projects-card,
 .projects .link-card {
-  padding: 45px;
+  padding: 15px;
   border-radius: var(--radius-20);
 }
 
