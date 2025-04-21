@@ -77,4 +77,72 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+ // 新产品页面javascript如下
  
+document.addEventListener('DOMContentLoaded', () => {
+
+  console.log("Clean Product Page Script Loaded.");
+
+  // --- New Thumbnail Image Changer ---
+  const mainImageElement = document.getElementById('main-product-img');
+  const thumbnailItems = document.querySelectorAll('.thumbnail-item');
+
+  if (mainImageElement && thumbnailItems.length > 0) {
+      console.log("New main image and thumbnails found.");
+
+      // Function to update the main image src and active thumbnail class
+      window.updateMainImage = function(clickedThumbnail) {
+          const newImageSrc = clickedThumbnail.src.replace('-100x100', '-600x600'); // Assuming main image name relates to thumbnail name - ADJUST IF NEEDED
+          console.log("Changing main image to:", newImageSrc);
+
+          mainImageElement.src = newImageSrc; // Set main image source
+          mainImageElement.alt = clickedThumbnail.alt.replace('Thumbnail', 'Primary Image'); // Update alt text
+
+          // Update active class on thumbnails
+          thumbnailItems.forEach(thumb => {
+              thumb.classList.remove('active');
+          });
+          clickedThumbnail.classList.add('active');
+      }
+
+      // Optional: Set first thumbnail as active on load
+      // thumbnailItems[0].classList.add('active'); // Already done in HTML
+
+  } else {
+      console.log("New main image or thumbnails NOT found.");
+  }
+
+
+  // --- New Quantity Selector Logic ---
+  const quantityInputElement = document.getElementById('quantity-input');
+  const minusButton = document.querySelector('.quantity-adjust-btn.minus');
+  const plusButton = document.querySelector('.quantity-adjust-btn.plus');
+
+  if (quantityInputElement && minusButton && plusButton) {
+      console.log("New quantity elements found.");
+
+      minusButton.addEventListener('click', () => {
+          let currentValue = parseInt(quantityInputElement.value, 10);
+          if (currentValue > 1) {
+              quantityInputElement.value = currentValue - 1;
+          }
+           console.log("Quantity:", quantityInputElement.value);
+      });
+
+      plusButton.addEventListener('click', () => {
+          let currentValue = parseInt(quantityInputElement.value, 10);
+          quantityInputElement.value = currentValue + 1; // No upper limit defined here
+          console.log("Quantity:", quantityInputElement.value);
+      });
+
+      quantityInputElement.addEventListener('change', () => {
+           let currentValue = parseInt(quantityInputElement.value, 10);
+           if (isNaN(currentValue) || currentValue < 1) {
+               quantityInputElement.value = 1; // Reset to 1 if invalid
+           }
+      });
+  } else {
+      console.log("New quantity elements NOT found.");
+  }
+
+}); // End of DOMContentLoaded
