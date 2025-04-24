@@ -15,7 +15,7 @@
   <link rel="preload" as="image" href="./assets/images/nfc-banner.jpg">
 
   <script
-  src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo,paylater,card"
+      src="https://www.paypal.com/sdk/js?client-id=AbJeevv0FaGdEslTKCM_fRGScNavwxMIlbH4kf_GTy4a6jbIKKX8TUGlfasgDWRFDjTtPRKc-te5YQn4&buyer-country=CA&currency=CAD&components=buttons&enable-funding=venmo,paylater,card"
       data-sdk-integration-source="developer-studio"
   ></script>
   </head>
@@ -94,7 +94,7 @@
     
                 <div class="image-column">
                     <div class="main-image-container">
-                        <img src="./assets/images/placeholder-600x600.png" alt="NFC Card Primary Image" id="main-product-img">
+                        <img src="./assets/images/NFC-google-review-card.jpg" alt="NFC Card Primary Image" id="main-product-img">
                     </div>
                     <div class="thumbnail-list">
                         <img src="./assets/images/placeholder-100x100-1.png" alt="NFC Card Thumbnail 1" class="thumbnail-item active" onclick="updateMainImage(this)">
@@ -107,18 +107,18 @@
     
                     <h1 class="product-title-main">Your NFC Card Product Name</h1>
     
-                    <p class="product-price-main">$25.00 CAD</p> <div class="product-options">
-                        <div class="option-group">
-                            <label for="card-finish-select" class="option-label">Card Finish:</label>
-                            <div class="select-control-wrapper">
-                                <select id="card-finish-select" name="card_finish" class="product-select">
-                                    <option value="white">Standard White</option>
-                                    <option value="black">Standard Black</option>
-                                    <option value="custom">Custom Design (Email Artwork)</option>
+                    <p class="product-price-main">$10.00 CAD</p> <div class="product-options">
+                      <div class="option-group">
+                        <label for="card-finish-select" class="option-label">Select Card Type:</label> <div class="select-control-wrapper">
+                            <select id="card-finish-select" name="card_type" class="product-select">
+                                <option value="google-review" data-price="10.00">NFC Google Review Card ($10.00)</option>
+                                <option value="google-stand" data-price="30.00">NFC Google Review Stand Card ($30.00)</option>
+                                <option value="instagram" data-price="20.00">Instagram Card ($20.00)</option>
+                                <option value="business" data-price="20.00">Business Card ($20.00)</option>
+                                <option value="custom" data-price="30.00">Custom Card ($30.00)</option>
                                 </select>
-                            </div>
                         </div>
-                        </div>
+                       </div>
     
                     <div class="option-group">
                          <label for="quantity-input" class="option-label">Quantity:</label>
@@ -138,11 +138,11 @@
                         <h2 class="description-heading">Description</h2>
                         <p>Replace this with a compelling description of your NFC cards. Mention key features like instant sharing, compatibility, and durability.</p>
                         <ul>
-                            <li>Feature 1 (e.g., Tap to Share Instantly)</li>
-                            <li>Feature 2 (e.g., iOS & Android Compatible)</li>
-                            <li>Feature 3 (e.g., Durable PVC Material)</li>
+                            <li>Feature 1 : Tap to Share Instantly</li>
+                            <li>Feature 2: iOS & Android Compatible</li>
+                            <li>Feature 3: Durable PVC Material</li>
                         </ul>
-                        <p><strong>Customization:</strong> If offering custom designs, explain the process here (e.g., select 'Custom Design' and email artwork to info@plansale.ca).</p>
+                        <p><strong>Customization:</strong> send all details to info@plansale.ca.</p>
                     </div>
     
                 </div></div><div class="detailed-instructions" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee;">
@@ -376,6 +376,7 @@
   <!-- 
     - custom js link
   -->
+
   <script src="./assets/js/script.js" defer></script>
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
