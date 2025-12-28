@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Funding Consultation - Government Grants & Business Loans | Plansale</title>
+  <meta name="description" content="Book your 30-minute business funding consultation. Get expert guidance on government grants, subsidies, and business loan applications.">
+  <meta name="keywords" content="business funding consultation, government grants, business loans, funding advisory, Plansale booking">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/payment.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="../index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="../contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="booking-hero">
+        <div class="container">
+          <p class="subtitle">💰 Business Funding & Loan Consultation</p>
+          <h1 class="h1">Navigate Government Grants & Financing</h1>
+          <div class="price-tag">
+            CAD $200 for 30 Minutes
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING FORM SECTION -->
+      <div class="booking-container">
+        <div class="booking-layout">
+
+          <!-- Main Form -->
+          <div class="booking-form-section">
+            
+            <!-- Alert Info -->
+            <div class="alert-box alert-info">
+              <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Premium Advisory Service</div>
+                <div class="alert-text">
+                  This specialized consultation focuses on government funding programs, grants, and business financing. Our advisors will help you identify and apply for the best funding opportunities for your business.
+                </div>
+              </div>
+            </div>
+
+            <form id="bookingForm">
+              
+              <!-- Personal Information -->
+              <div class="form-section">
+                <h3 class="form-section-title">Personal Information</h3>
+                <p class="form-section-subtitle">Please provide your contact details</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      First Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="firstName" placeholder="John" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Last Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="lastName" placeholder="Doe" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Email Address <span class="required">*</span>
+                    </label>
+                    <input type="email" class="form-input" id="email" placeholder="john@example.com" required>
+                    <div class="form-hint">We'll send your confirmation here</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Phone Number <span class="required">*</span>
+                    </label>
+                    <input type="tel" class="form-input" id="phone" placeholder="+1 (647) 123-4567" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Company Name <span class="required">*</span>
+                  </label>
+                  <input type="text" class="form-input" id="company" placeholder="Your Business Name" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Business Registration Number (if applicable)
+                  </label>
+                  <input type="text" class="form-input" id="businessNumber" placeholder="BN or CRA number">
+                </div>
+              </div>
+
+              <!-- Business Information -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Business & Funding Information</h3>
+                <p class="form-section-subtitle">Help us understand your funding needs</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Industry <span class="required">*</span>
+                    </label>
+                    <select class="form-select" id="industry" required>
+                      <option value="">Select your industry</option>
+                      <option value="retail">Retail & E-commerce</option>
+                      <option value="restaurant">Restaurant & Food Service</option>
+                      <option value="healthcare">Healthcare & Wellness</option>
+                      <option value="professional">Professional Services</option>
+                      <option value="technology">Technology & Software</option>
+                      <option value="manufacturing">Manufacturing</option>
+                      <option value="agriculture">Agriculture & Food Production</option>
+                      <option value="real-estate">Real Estate & Construction</option>
+                      <option value="automotive">Automotive</option>
+                      <option value="green-energy">Green Energy & Sustainability</option>
+                      <option value="education">Education & Training</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Business Stage <span class="required">*</span>
+                    </label>
+                    <select class="form-select" id="businessStage" required>
+                      <option value="">Select business stage</option>
+                      <option value="startup">Startup (0-2 years)</option>
+                      <option value="growth">Growth Stage (2-5 years)</option>
+                      <option value="established">Established (5+ years)</option>
+                      <option value="expansion">Planning Expansion</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Funding Amount Needed <span class="required">*</span>
+                  </label>
+                  <select class="form-select" id="fundingAmount" required>
+                    <option value="">Select approximate amount</option>
+                    <option value="under-25k">Under $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k-250k">$100,000 - $250,000</option>
+                    <option value="250k-500k">$250,000 - $500,000</option>
+                    <option value="over-500k">Over $500,000</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Funding Purpose <span class="required">*</span>
+                  </label>
+                  <select class="form-select" id="fundingPurpose" required>
+                    <option value="">Select primary purpose</option>
+                    <option value="startup-capital">Startup Capital</option>
+                    <option value="equipment">Equipment Purchase</option>
+                    <option value="expansion">Business Expansion</option>
+                    <option value="hiring">Hiring & Training</option>
+                    <option value="marketing">Marketing & Sales</option>
+                    <option value="rd">Research & Development</option>
+                    <option value="export">Export Development</option>
+                    <option value="working-capital">Working Capital</option>
+                    <option value="innovation">Innovation & Technology</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Funding Goals & Business Description <span class="required">*</span>
+                  </label>
+                  <textarea class="form-textarea" id="fundingGoals" placeholder="Please describe your business, funding goals, and what you plan to use the funds for. Include any specific programs you're interested in or questions you have..." required></textarea>
+                  <div class="form-hint">The more details you provide, the better we can prepare for your consultation</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Have you applied for funding before?
+                  </label>
+                  <select class="form-select" id="previousFunding">
+                    <option value="">Select option</option>
+                    <option value="no">No, this is my first time</option>
+                    <option value="yes-approved">Yes, and was approved</option>
+                    <option value="yes-denied">Yes, but was denied</option>
+                    <option value="yes-partial">Yes, received partial funding</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Preferred Communication Method <span class="required">*</span>
+                  </label>
+                  <select class="form-select" id="commMethod" required>
+                    <option value="">Select preference</option>
+                    <option value="video">Video Call (Zoom/Google Meet)</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="in-person">In-Person (Markham Office)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Date & Time Selection -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Select Date & Time</h3>
+                <p class="form-section-subtitle">Choose your preferred consultation slot</p>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Preferred Date <span class="required">*</span>
+                  </label>
+                  <input type="date" class="form-input" id="prefDate" required min="2025-12-28">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Preferred Time Slot <span class="required">*</span>
+                  </label>
+                  <input type="hidden" id="selectedTime" required>
+                  <div class="time-slots">
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="9:00 AM">9:00 AM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="10:00 AM">10:00 AM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="11:00 AM">11:00 AM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="1:00 PM">1:00 PM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="2:00 PM">2:00 PM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="3:00 PM">3:00 PM</div>
+                    <div class="time-slot" onclick="selectTimeSlot(this)" data-time="4:00 PM">4:00 PM</div>
+                    <div class="time-slot unavailable" data-time="5:00 PM">5:00 PM</div>
+                  </div>
+                  <div class="form-hint">All times are in EST (Eastern Standard Time)</div>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Payment Method</h3>
+                <p class="form-section-subtitle">Choose how you'd like to pay</p>
+
+                <div class="payment-methods">
+                  <div class="payment-method selected" onclick="selectPayment(this, 'card')" data-payment="card">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-name">Credit Card</div>
+                  </div>
+                  <div class="payment-method" onclick="selectPayment(this, 'etransfer')" data-payment="etransfer">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-name">E-Transfer</div>
+                  </div>
+                </div>
+
+                <!-- Credit Card Details -->
+                <div id="cardDetails" style="margin-top: 25px;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="card" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">Secure Payment via PayPal</div>
+                      <div class="alert-text">
+                        Your credit card information is processed securely through PayPal's payment system. We never store your card details.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Card Number <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label">
+                        Expiry Date <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">
+                        CVV <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardCVV" placeholder="123" maxlength="4">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Cardholder Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardName" placeholder="John Doe">
+                  </div>
+                </div>
+
+                <!-- E-Transfer Instructions -->
+                <div id="etransferDetails" style="margin-top: 25px; display: none;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">How to Complete Your E-Transfer Payment</div>
+                      <div class="alert-text">
+                        After submitting this form, please send your E-Transfer payment to complete your booking. Your consultation will be confirmed once payment is received.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background: var(--ghost-white); padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <h4 style="color: var(--raisin-black-1); margin-bottom: 15px; font-size: var(--fs-6);">
+                      📧 E-Transfer Details:
+                    </h4>
+                    
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Send To:</strong>
+                      <a href="#" id="revealEmail" style="color: var(--majorelle-blue); font-size: var(--fs-5); font-weight: var(--fw-700); text-decoration: none;">Click to reveal email</a>
+                      <div id="copyHint" style="display: none; color: var(--cool-gray); font-size: var(--fs-8); margin-top: 5px;">✓ Email copied to clipboard!</div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Amount:</strong>
+                      <span style="color: var(--raisin-black-1); font-size: var(--fs-5); font-weight: var(--fw-700);">CAD $226.00</span>
+                      <span style="color: var(--cool-gray); font-size: var(--fs-8); margin-left: 10px;">(includes HST)</span>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Message/Memo (Required):</strong>
+                      <div style="background: var(--white); padding: 15px; border-radius: 10px; border: 2px dashed var(--majorelle-blue); margin-top: 10px;">
+                        <p style="color: var(--cool-gray); font-size: var(--fs-7); margin: 0; line-height: 1.6;">
+                          Please include the following in your E-Transfer message:
+                        </p>
+                        <ul style="margin: 10px 0 0 20px; color: var(--raisin-black-1); font-size: var(--fs-7);">
+                          <li>Your Full Name</li>
+                          <li>Company Name</li>
+                          <li>Service: Funding Consultation</li>
+                          <li>Preferred Date & Time</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div style="background: rgba(102, 126, 234, 0.1); padding: 15px; border-radius: 10px; border-left: 4px solid var(--majorelle-blue);">
+                      <p style="color: var(--raisin-black-1); font-size: var(--fs-8); margin: 0; line-height: 1.6;">
+                        <strong>⏱️ Important:</strong> Your booking will be confirmed within 24 hours after we receive your E-Transfer payment. You'll receive a confirmation email with your meeting details.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms & Conditions -->
+              <div class="form-section" style="margin-top: 30px;">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="terms" class="checkbox-input" required>
+                  <label for="terms" class="checkbox-label">
+                    I agree to the <a href="#" style="color: var(--majorelle-blue);">Terms & Conditions</a> and <a href="#" style="color: var(--majorelle-blue);">Cancellation Policy</a>. Cancellations must be made 24 hours in advance for a full refund.
+                  </label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="marketing" class="checkbox-input">
+                  <label for="marketing" class="checkbox-label">
+                    I'd like to receive information about funding opportunities and business resources from Plansale
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Section -->
+              <div class="submit-section">
+                <button type="submit" class="btn-submit" id="submitBtn">
+                  Confirm Booking & Pay CAD $226.00
+                </button>
+                <div class="secure-notice">
+                  <ion-icon name="lock-closed"></ion-icon>
+                  <span id="secureText">Secure SSL encrypted payment via PayPal</span>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <ion-icon name="shield-checkmark"></ion-icon>
+                <span>Secure Checkout</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="refresh"></ion-icon>
+                <span>Easy Refunds</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="chatbubbles"></ion-icon>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Sidebar -->
+          <aside class="order-summary">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <div class="summary-item">
+              <span class="summary-label">Service</span>
+              <span class="summary-value">Funding Advisory</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Duration</span>
+              <span class="summary-value">30 Minutes</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Consultation Fee</span>
+              <span class="summary-value">CAD $200.00</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Tax (HST 13%)</span>
+              <span class="summary-value">CAD $26.00</span>
+            </div>
+
+            <div class="summary-total">
+              <div class="summary-item">
+                <span class="summary-label">Total Amount</span>
+                <span class="summary-value">CAD $226.00</span>
+              </div>
+            </div>
+
+            <h4 style="margin-top: 30px; margin-bottom: 15px; color: var(--raisin-black-1); font-size: var(--fs-6);">
+              What's Included:
+            </h4>
+            <ul class="features-list">
+              <li>Government grant program identification</li>
+              <li>Eligibility assessment & strategy</li>
+              <li>Business loan options & matching</li>
+              <li>Financial documentation guidance</li>
+              <li>Application writing support</li>
+              <li>Exclusive funding database access</li>
+              <li>Post-application follow-up</li>
+            </ul>
+
+            <div class="alert-box alert-info" style="margin-top: 25px;">
+              <ion-icon name="star" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Premium Service</div>
+                <div class="alert-text">
+                  Our advisors have helped businesses secure over $10M in funding. 90% success rate.
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- Booking Page JS -->
+  <script src="../assets/js/payment.js"></script>
+
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

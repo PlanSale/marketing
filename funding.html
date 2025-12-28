@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Grants & Funding Programs - CDAP, BDC, RAISE | Plansale</title>
+  <meta name="description" content="Access up to $10,000 in government grants for your Canadian small business. Expert assistance with CDAP, BDC, RAISE, and other funding programs. 90% approval rate.">
+  <meta name="keywords" content="CDAP grant, government funding Canada, small business grants, BDC financing, RAISE grant Ontario, digital adoption program, business funding Toronto">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Funding Page Specific Styles */
+    .funding-hero {
+      background: linear-gradient(180deg, #ffe3d4,#ff8000 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .funding-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .funding-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .funding-hero .h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+      font-size: var(--fs-1);
+    }
+
+    .funding-hero .hero-text {
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: var(--fs-5);
+      line-height: 1.6;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: center;
+    }
+
+    .hero-stat-number {
+      font-size: var(--fs-1);
+      font-weight: var(--fw-700);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .hero-stat-label {
+      font-size: var(--fs-8);
+      opacity: 0.9;
+    }
+
+    .funding-intro-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .intro-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-content .h2 {
+      margin-bottom: 20px;
+      color: var(--raisin-black-1);
+    }
+
+    .intro-text {
+      color: var(--cool-gray);
+      font-size: var(--fs-6);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .program-section {
+      padding: 80px 0;
+    }
+
+    .program-section:nth-child(even) {
+      background-color: var(--ghost-white);
+    }
+
+    .program-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .program-badge {
+      display: inline-block;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: var(--fs-9);
+      font-weight: var(--fw-700);
+      margin-bottom: 15px;
+    }
+
+    .program-header .h2 {
+      color: var(--raisin-black-1);
+      margin-bottom: 15px;
+    }
+
+    .program-description {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      line-height: 1.6;
+    }
+
+    .program-card {
+      background: var(--white);
+      border-radius: var(--radius-20);
+      padding: 40px;
+      box-shadow: var(--shadow-4);
+      margin-bottom: 30px;
+    }
+
+    .program-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .program-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--majorelle-blue), hsl(267, 76%, 57%));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .program-icon ion-icon {
+      font-size: 40px;
+      color: var(--white);
+    }
+
+    .program-card-title {
+      flex: 1;
+    }
+
+    .program-amount {
+      background: linear-gradient(135deg, #ffb288,#ff8000 50%);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .program-card-title .h3 {
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+    }
+
+    .program-subtitle {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    .program-features {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+
+    .program-features li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: var(--slate-gray);
+      line-height: 1.6;
+    }
+
+    .program-features ion-icon {
+      color: var(--majorelle-blue);
+      font-size: 24px;
+      margin-right: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .eligibility-box {
+      background: var(--ghost-white);
+      padding: 25px;
+      border-radius: var(--radius-15);
+      margin: 25px 0;
+    }
+
+    .eligibility-box .h4 {
+      color: var(--raisin-black-1);
+      margin-bottom: 15px;
+    }
+
+    .eligibility-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .eligibility-list li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--gainsboro);
+      color: var(--slate-gray);
+    }
+
+    .eligibility-list li:last-child {
+      border-bottom: none;
+    }
+
+    .eligibility-list ion-icon {
+      color:#ff8000;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .process-section {
+      background: var(--majorelle-blue);
+      padding: 80px 0;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .process-section .h2 {
+      color: var(--white);
+      margin-bottom: 50px;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .process-step {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: var(--radius-15);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--white);
+      color: var(--majorelle-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--fs-2);
+      font-weight: var(--fw-700);
+      margin: 0 auto 20px;
+    }
+
+    .process-step .h4 {
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .process-step .step-text {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: var(--fs-8);
+    }
+
+    .success-stories {
+      padding: 80px 0;
+      background: var(--ghost-white);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius-15);
+      box-shadow: var(--shadow-3);
+    }
+
+    .testimonial-header {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      background: var(--majorelle-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
+      flex-shrink: 0;
+    }
+
+    .testimonial-info .h4 {
+      color: var(--raisin-black-1);
+      margin-bottom: 5px;
+    }
+
+    .testimonial-business {
+      color: var(--cool-gray);
+      font-size: var(--fs-9);
+    }
+
+    .testimonial-text {
+      color: var(--slate-gray);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .funding-amount {
+      background: var(--ghost-white);
+      padding: 10px 15px;
+      border-radius: var(--radius-8);
+      display: inline-block;
+      color: #ff8000;
+      font-weight: var(--fw-700);
+      font-size: var(--fs-8);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, hsl(241, 77%, 63%) 0%, hsl(267, 76%, 57%) 100%);
+      padding: 80px 0;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta-section .h2 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: var(--fs-6);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--majorelle-blue);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--majorelle-blue);
+    }
+
+    .faq-section {
+      padding: 80px 0;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-15);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-3);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition-1);
+    }
+
+    .faq-question:hover {
+      background: var(--ghost-white);
+    }
+
+    .faq-question .h4 {
+      color: var(--raisin-black-1);
+      margin: 0;
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      color: var(--majorelle-blue);
+      transition: var(--transition-1);
+    }
+
+    .faq-answer {
+      padding: 0 25px 25px;
+      color: var(--slate-gray);
+      line-height: 1.8;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="funding.html" class="navbar-link active" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="funding-hero">
+        <div class="container">
+          <h1 class="h1">Access Government Funding for Your Business</h1>
+          <p class="hero-text">
+            Unlock up to $10,000 in grants and financing to fuel your digital transformation. 
+            We handle the complex application process so you can focus on growing your business.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number">$2M+</span>
+              <span class="hero-stat-label">Grants Secured</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">90%</span>
+              <span class="hero-stat-label">Approval Rate</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">100+</span>
+              <span class="hero-stat-label">Businesses Funded</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTRO SECTION -->
+      <section class="funding-intro-section">
+        <div class="container">
+          <div class="intro-content">
+            <h2 class="h2">Why Government Funding?</h2>
+            <p class="intro-text">
+              Canadian government programs are designed to help small and medium businesses adopt digital technologies, 
+              expand operations, and compete globally. These non-repayable grants and low-interest loans can cover 
+              website development, e-commerce platforms, digital marketing, software adoption, and technology upgrades.
+            </p>
+            <p class="intro-text">
+              With our expertise and 90% approval rate, we've helped over 100 businesses across Ontario and Canada 
+              secure more than $2 million in funding. Let us guide you through the application process.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ONTARIO RAISE GRANT -->
+      <section class="program-section">
+        <div class="container">
+          
+          <div class="program-header">
+            <span class="program-badge">FEATURED PROGRAM</span>
+            <h2 class="h2">Ontario RAISE Grant</h2>
+            <p class="program-description">
+              Supporting Indigenous, Black, and racialized entrepreneurs in Ontario with funding, 
+              training, and mentorship opportunities.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon">
+                <ion-icon name="megaphone-outline"></ion-icon>
+              </div>
+              <div class="program-card-title">
+                <span class="program-amount">Up to $10,000</span>
+                <h3 class="h3">RAISE Grant Program</h3>
+                <p class="program-subtitle">One-time grant for eligible entrepreneurs</p>
+              </div>
+            </div>
+
+            <p style="color: var(--cool-gray); line-height: 1.8; margin-bottom: 20px;">
+              The RAISE (Randall Activation, Innovation and Scale-up for Entrepreneurs) Grant provides 
+              $10,000 to Indigenous, Black, and other racialized entrepreneurs in Ontario after completing 
+              program requirements including training, coaching, and networking sessions.
+            </p>
+
+            <ul class="program-features">
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>$10,000 non-repayable grant</strong> upon program completion</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Business training and coaching</strong> from industry experts</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Networking opportunities</strong> with fellow entrepreneurs</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Eligible costs:</strong> Marketing, digital transformation, equipment, operations</span>
+              </li>
+            </ul>
+
+            <div class="eligibility-box">
+              <h4 class="h4">Eligibility Requirements</h4>
+              <ul class="eligibility-list">
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Self-identify as Indigenous, Black, or racialized entrepreneur
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Business located and operating in Ontario
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Complete mandatory training and coaching sessions
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Commit to program participation requirements
+                </li>
+              </ul>
+            </div>
+
+            <a href="blogs/raise.html" target="_blank" class="btn btn-primary has-before has-after">
+              Learn More About RAISE
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BDC FINANCING -->
+      <section class="program-section">
+        <div class="container">
+          
+          <div class="program-header">
+            <span class="program-badge">FINANCING OPTION</span>
+            <h2 class="h2">BDC Digital Financing</h2>
+            <p class="program-description">
+              Flexible financing and advisory services from Canada's only bank dedicated exclusively to entrepreneurs.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon">
+                <ion-icon name="trending-up-outline"></ion-icon>
+              </div>
+              <div class="program-card-title">
+                <span class="program-amount">Flexible Amounts</span>
+                <h3 class="h3">Business Development Bank of Canada (BDC)</h3>
+                <p class="program-subtitle">Loans and consulting for digital transformation</p>
+              </div>
+            </div>
+
+            <p style="color: var(--cool-gray); line-height: 1.8; margin-bottom: 20px;">
+              BDC provides financing solutions tailored for small and medium-sized businesses undertaking 
+              digital transformation initiatives. Access low-interest loans combined with expert advisory 
+              services to maximize your technology investments.
+            </p>
+
+            <ul class="program-features">
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Flexible loan amounts</strong> based on business needs</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Competitive interest rates</strong> for technology investments</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Expert advisory services</strong> included with financing</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Technology upgrades:</strong> Software, hardware, digital infrastructure</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>E-commerce development</strong> and online presence expansion</span>
+              </li>
+            </ul>
+
+            <div class="eligibility-box">
+              <h4 class="h4">What BDC Finances</h4>
+              <ul class="eligibility-list">
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Website development and e-commerce platforms
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Digital marketing and online advertising
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Software and technology infrastructure
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Cybersecurity and data protection systems
+                </li>
+              </ul>
+            </div>
+
+            <a href="blogs/bcd.html" target="_blank" class="btn btn-primary has-before has-after">
+              Explore BDC Financing
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CSBFP PROGRAM -->
+      <section class="program-section">
+        <div class="container">
+          
+          <div class="program-header">
+            <span class="program-badge">LOAN PROGRAM</span>
+            <h2 class="h2">Canada Small Business Financing Program</h2>
+            <p class="program-description">
+              Government-backed loans to help small businesses purchase equipment and improve facilities.
+            </p>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card-header">
+              <div class="program-icon">
+                <ion-icon name="cash-outline"></ion-icon>
+              </div>
+              <div class="program-card-title">
+                <span class="program-amount">Up to $1 Million</span>
+                <h3 class="h3">Small Business Financing Program (CSBFP)</h3>
+                <p class="program-subtitle">Government-guaranteed business loans</p>
+              </div>
+            </div>
+
+            <p style="color: var(--cool-gray); line-height: 1.8; margin-bottom: 20px;">
+              The Canada Small Business Financing Program makes it easier for small businesses to get loans 
+              from financial institutions by sharing the risk with lenders. Use funds to purchase equipment, 
+              improve leasehold improvements, or buy real property.
+            </p>
+
+            <ul class="program-features">
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Loan amounts:</strong> Up to $1 million total ($350k for equipment)</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Government guarantee:</strong> 85% loan guarantee reduces lender risk</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Flexible terms:</strong> Up to 10 years for equipment, 15 for real property</span>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <span><strong>Competitive rates:</strong> Prime + 3% floating or fixed rate options</span>
+              </li>
+            </ul>
+
+            <div class="eligibility-box">
+              <h4 class="h4">Eligible Businesses</h4>
+              <ul class="eligibility-list">
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Gross annual revenues of $10 million or less
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Operating for profit in Canada
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  Most industries eligible (some exceptions apply)
+                </li>
+              </ul>
+            </div>
+
+            <a href="blogs/CSBFP.html" target="_blank" class="btn btn-primary has-before has-after">
+              Learn About CSBFP
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- OUR PROCESS -->
+      <section class="process-section">
+        <div class="container">
+          <h2 class="h2">Our Simple 4-Step Process</h2>
+          <p style="opacity: 0.9; max-width: 700px; margin: 0 auto;">
+            We handle the complexity so you don't have to. Here's how we help you secure funding:
+          </p>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h4 class="h4">Free Consultation</h4>
+              <p class="step-text">
+                We assess your business needs and identify the best funding programs for you
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h4 class="h4">Application Prep</h4>
+              <p class="step-text">
+                Our experts prepare all required documentation and strengthen your application
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h4 class="h4">Submission</h4>
+              <p class="step-text">
+                We submit your application and communicate with funding agencies on your behalf
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h4 class="h4">Get Funded</h4>
+              <p class="step-text">
+                Receive your grant or loan approval and begin your digital transformation
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUCCESS STORIES -->
+      <section class="success-stories">
+        <div class="container">
+          
+          <div class="program-header">
+            <h2 class="h2">Success Stories</h2>
+            <p class="program-description">
+              Real businesses we've helped secure funding and transform digitally
+            </p>
+          </div>
+
+          <div class="testimonial-grid">
+            
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">MW</div>
+                <div class="testimonial-info">
+                  <h4 class="h4">Maria Wong</h4>
+                  <p class="testimonial-business">Fei Jia Immigration</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Plansale helped us navigate the CDAP grant process seamlessly. With the $2,400 grant, 
+                we built a modern website with online ordering. Our digital sales increased 200% in 6 months!"
+              </p>
+              <span class="funding-amount">$10,000 CDAP Grant Secured</span>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">JC</div>
+                <div class="testimonial-info">
+                  <h4 class="h4">James Chen</h4>
+                  <p class="testimonial-business">Luxe Nova Reno</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "The team made the funding process stress-free. They handled everything from application 
+                to approval. We used the grant to digitize our operations and now manage projects 50% faster."
+              </p>
+              <span class="funding-amount">$10,000 RAISE Grant Secured</span>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">SK</div>
+                <div class="testimonial-info">
+                  <h4 class="h4">Sarah Kim</h4>
+                  <p class="testimonial-business">Princeton Wellness Centre</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "Thanks to Plansale, we secured BDC financing for our clinic management system. 
+                Online booking has transformed our patient experience and reduced no-shows by 60%."
+              </p>
+              <span class="funding-amount">BDC Financing Approved</span>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">DL</div>
+                <div class="testimonial-info">
+                  <h4 class="h4">David Lee</h4>
+                  <p class="testimonial-business">SavageKick Streetwear</p>
+                </div>
+              </div>
+              <p class="testimonial-text">
+                "The government grant allowed us to build a professional e-commerce platform. 
+                Our online sales now account for 70% of revenue. Best investment we ever made!"
+              </p>
+              <span class="funding-amount">$10,000 Digital Grant Secured</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="faq-section">
+        <div class="container">
+          
+          <div class="program-header">
+            <h2 class="h2">Frequently Asked Questions</h2>
+            <p class="program-description">
+              Common questions about government funding programs
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">Who is eligible for government grants?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              Most Canadian small and medium businesses with fewer than 500 employees are eligible. 
+              Specific programs have additional requirements such as revenue limits, industry type, 
+              or demographic criteria. We help determine which programs fit your business.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">How long does the application process take?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              Application timelines vary by program. CDAP typically takes 2-4 weeks from application 
+              to approval. RAISE and other grants may take 6-12 weeks. We expedite the process by 
+              ensuring all documentation is complete and accurate from the start.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">Do I need to repay government grants?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              No! Grants like CDAP and RAISE are non-repayable funding. You receive the money to 
+              invest in your business without any repayment obligation. Loans like CSBFP and BDC 
+              financing do require repayment with interest.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">What can I use the funding for?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              Funding can be used for website development, e-commerce platforms, digital marketing, 
+              software purchases, technology upgrades, equipment, training, and consulting services. 
+              Each program has specific eligible expenses we'll help you understand.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">What is your success rate?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              We maintain a 90% approval rate across all funding programs. Our expertise in preparing 
+              strong applications, understanding program requirements, and presenting your business 
+              effectively significantly increases your chances of approval.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4 class="h4">How much does your service cost?</h4>
+              <ion-icon name="chevron-down-outline" class="faq-icon"></ion-icon>
+            </div>
+            <div class="faq-answer">
+              We offer a free initial consultation to assess your eligibility. Our application 
+              support services are competitively priced and often recoverable through the grant 
+              funding itself. Contact us for a detailed quote based on your specific needs.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section" id="contact">
+        <div class="container">
+          <h2 class="h2">Ready to Access Government Funding?</h2>
+          <p class="cta-text">
+            Let's discuss which funding programs are right for your business. 
+            Get a free consultation and eligibility assessment today.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="tel:+16479472456" class="btn-white">
+              <ion-icon name="call-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+              Call (647) 947-2456
+            </a>
+
+            <a href="mailto:info@plansale.ca" class="btn-outline">
+              <ion-icon name="mail-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+              Email info@plansale.ca
+            </a>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%20L6C%200M5"
+                class="btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: inherit; text-decoration: underline;">
+                 <ion-icon name="location-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                Markham, Ontario
+              </a>
+        
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- CUSTOM JS -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- IONICON -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

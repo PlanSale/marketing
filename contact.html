@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Get in Touch with Plansale | Toronto Digital Agency</title>
+  <meta name="description" content="Contact Plansale for web development, digital marketing, and business consulting services in Toronto. Call (647) 947-2456 or visit our Markham office.">
+  <meta name="keywords" content="contact Plansale, Toronto web agency, Markham office, business consultation, web development contact, digital marketing Toronto">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-hero {
+      background: linear-gradient(180deg, #ffe3d4, #ff8000 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+      opacity: 0.3;
+    }
+
+    .contact-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-hero .h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+      font-size: var(--fs-1);
+    }
+
+    .contact-hero .hero-text {
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: var(--fs-5);
+      line-height: 1.6;
+    }
+
+    .contact-main-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1.5fr;
+      }
+    }
+
+    .contact-info-card {
+      background: var(--white);
+      border-radius: var(--radius-20);
+      padding: 40px;
+      box-shadow: var(--shadow-4);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .contact-info-card .h3 {
+      color: var(--raisin-black-1);
+      margin-bottom: 30px;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-info-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--gainsboro);
+    }
+
+    .contact-info-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(180deg, #ffe3d4, #ff8000);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon ion-icon {
+      font-size: 24px;
+      color: var(--white);
+    }
+
+    .contact-info-content .h4 {
+      color: var(--raisin-black-1);
+      margin-bottom: 8px;
+      font-size: var(--fs-7);
+    }
+
+    .contact-info-text {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+      line-height: 1.6;
+    }
+
+    .contact-info-text a {
+      color: #ff8000;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .contact-info-text a:hover {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .social-link-btn {
+      width: 45px;
+      height: 45px;
+      background: var(--ghost-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--majorelle-blue);
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .social-link-btn:hover {
+      background: linear-gradient(180deg, #ffe3d4, #ff8000);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .contact-form-card {
+      background: var(--white);
+      border-radius: var(--radius-20);
+      padding: 40px;
+      box-shadow: var(--shadow-4);
+    }
+
+    .contact-form-card .h3 {
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+    }
+
+    .form-subtitle {
+      color: var(--cool-gray);
+      margin-bottom: 30px;
+      font-size: var(--fs-7);
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-500);
+      margin-bottom: 10px;
+      font-size: var(--fs-8);
+    }
+
+    .form-label .required {
+      color: #ff8000;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid var(--gainsboro);
+      border-radius: var(--radius-10);
+      font-size: var(--fs-8);
+      font-family: var(--ff-dm-sans);
+      transition: var(--transition-1);
+      background: var(--white);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: #ff8000;
+      box-shadow: 0 0 0 3px rgba(255, 128, 0, 0.1);
+    }
+
+    .form-textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .form-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .submit-btn {
+      background: linear-gradient(180deg, #ffe3d4, #ff8000);
+      color: var(--white);
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      cursor: pointer;
+      transition: var(--transition-1);
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 128, 0, 0.3);
+    }
+
+    .submit-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .map-section {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 450px;
+      background: var(--gainsboro);
+      position: relative;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .office-hours-section {
+      padding: 80px 0;
+      background: var(--ghost-white);
+    }
+
+    .office-hours-grid {
+      display: grid;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .office-hours-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .hours-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius-15);
+      box-shadow: var(--shadow-3);
+    }
+
+    .hours-card .h4 {
+      color: var(--raisin-black-1);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hours-card .h4 ion-icon {
+      color: #ff8000;
+      font-size: 28px;
+    }
+
+    .hours-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hours-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gainsboro);
+      color: var(--slate-gray);
+    }
+
+    .hours-item:last-child {
+      border-bottom: none;
+    }
+
+    .hours-item .day {
+      font-weight: var(--fw-500);
+      color: var(--raisin-black-1);
+    }
+
+    .hours-item .time {
+      color: var(--cool-gray);
+    }
+
+    .hours-item.closed .time {
+      color: #ff8000;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, hsl(241, 77%, 63%) 0%, hsl(267, 76%, 57%) 100%);
+      padding: 80px 0;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta-section .h2 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-text {
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: var(--fs-6);
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--majorelle-blue);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .directions-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius-15);
+      box-shadow: var(--shadow-3);
+    }
+
+    .directions-card .h4 {
+      color: var(--raisin-black-1);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .directions-card .h4 ion-icon {
+      color: #ff8000;
+      font-size: 28px;
+    }
+
+    .directions-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .directions-list li {
+      color: var(--cool-gray);
+      padding: 10px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .directions-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #ff8000;
+      font-weight: bold;
+    }
+
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 20px;
+      border-radius: var(--radius-10);
+      margin-bottom: 20px;
+      display: none;
+      border: 1px solid #c3e6cb;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      padding: 20px;
+      border-radius: var(--radius-10);
+      margin-bottom: 20px;
+      display: none;
+      border: 1px solid #f5c6cb;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link active" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="tel:+16479472456" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="contact-hero">
+        <div class="container">
+          <h1 class="h1">Get In Touch</h1>
+          <p class="hero-text">
+            Have a project in mind? Need expert advice? We're here to help. 
+            Reach out and let's discuss how we can transform your digital presence.
+          </p>
+        </div>
+      </section>
+
+      <!-- MAIN CONTACT SECTION -->
+      <section class="contact-main-section">
+        <div class="container">
+          
+          <div class="contact-grid">
+            
+            <!-- CONTACT INFO -->
+            <div class="contact-info-card">
+              <h3 class="h3">Contact Information</h3>
+              
+              <ul class="contact-info-list">
+                
+                <li class="contact-info-item">
+                  <div class="contact-icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4 class="h4">Phone Number</h4>
+                    <p class="contact-info-text">
+                      <a href="tel:+16479472456">+1 (647) 947-2456</a><br>
+                      Monday - Friday: 9:00 AM - 6:00 PM<br>
+                      Saturday: 10:00 AM - 4:00 PM
+                    </p>
+                  </div>
+                </li>
+
+                <li class="contact-info-item">
+                  <div class="contact-icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4 class="h4">Email Address</h4>
+                    <p class="contact-info-text">
+                      General Inquiries: <a href="/cdn-cgi/l/email-protection#3b52555d547b4b575a55485a575e15585a"><span class="__cf_email__" data-cfemail="5d34333b321d2d313c332e3c3138733e3c">[email&#160;protected]</span></a><br>
+                      Support: <a href="/cdn-cgi/l/email-protection#acdfd9dcdcc3ded8ecdcc0cdc2dfcdc0c982cfcd"><span class="__cf_email__" data-cfemail="7b080e0b0b14090f3b0b171a15081a171e55181a">[email&#160;protected]</span></a><br>
+                      Careers: <a href="/cdn-cgi/l/email-protection#6e0d0f1c0b0b1c1d2e1e020f001d0f020b400d0f"><span class="__cf_email__" data-cfemail="1576746770706766556579747b667479703b7674">[email&#160;protected]</span></a>
+                    </p>
+                  </div>
+                </li>
+
+                <li class="contact-info-item">
+                  <div class="contact-icon">
+                    <ion-icon name="location-outline"></ion-icon>
+                  </div>
+                  <div class="contact-info-content">
+                    <h4 class="h4">Office Location</h4>
+                    <p class="contact-info-text">
+                      9390 Woodbine Ave<br>
+                      Markham, Ontario<br>
+                      Canada L6C 0M5
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+
+              <div class="social-links">
+                <a href="#" class="social-link-btn" aria-label="Facebook">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#" class="social-link-btn" aria-label="Twitter">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="#" class="social-link-btn" aria-label="Instagram">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#" class="social-link-btn" aria-label="LinkedIn">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" class="social-link-btn" aria-label="YouTube">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-card">
+              <h3 class="h3">Send Us a Message</h3>
+              <p class="form-subtitle">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+
+              <div id="success-message" class="success-message">
+                <strong>Success!</strong> Your message has been sent. We'll get back to you soon.
+              </div>
+
+              <div id="error-message" class="error-message">
+                <strong>Error!</strong> Something went wrong. Please try again.
+              </div>
+
+              <form id="contact-form" action="#" method="POST">
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name" class="form-label">
+                      First Name <span class="required">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="first-name" 
+                      name="first-name" 
+                      class="form-input" 
+                      placeholder="John" 
+                      required
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="last-name" class="form-label">
+                      Last Name <span class="required">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="last-name" 
+                      name="last-name" 
+                      class="form-input" 
+                      placeholder="Doe" 
+                      required
+                    >
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email" class="form-label">
+                      Email Address <span class="required">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      class="form-input" 
+                      placeholder="john@example.com" 
+                      required
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone" class="form-label">
+                      Phone Number
+                    </label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      class="form-input" 
+                      placeholder="+1 (647) 123-4567"
+                    >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="company" class="form-label">
+                    Company Name
+                  </label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    class="form-input" 
+                    placeholder="Your Company Inc."
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="service" class="form-label">
+                    Service Interested In <span class="required">*</span>
+                  </label>
+                  <select id="service" name="service" class="form-select" required>
+                    <option value="">Select a service...</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="design-creatives">Design & Creatives</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="seo-geo">SEO & GEO</option>
+                    <option value="government-funding">Government Funding Application</option>
+                    <option value="business-consulting">Business Consulting</option>
+                    <option value="nfc-products">NFC Products</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="budget" class="form-label">
+                    Project Budget
+                  </label>
+                  <select id="budget" name="budget" class="form-select">
+                    <option value="">Select budget range...</option>
+                    <option value="under-5k">Under $5,000</option>
+                    <option value="5k-10k">$5,000 - $10,000</option>
+                    <option value="10k-25k">$10,000 - $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-plus">$50,000+</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">
+                    Your Message <span class="required">*</span>
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    class="form-textarea" 
+                    placeholder="Tell us about your project, goals, and timeline..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  Send Message
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MAP SECTION -->
+      <section class="map-section">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.6487449286746!2d-79.25824492345165!3d43.87635397109488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d5b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2s9390%20Woodbine%20Ave%2C%20Markham%2C%20ON%20L6C%200M5!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Plansale Office Location Map">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- OFFICE HOURS & DIRECTIONS -->
+      <section class="office-hours-section">
+        <div class="container">
+          
+          <div class="program-header">
+            <h2 class="h2">Visit Our Office</h2>
+            <p class="program-description">
+              We're located in the heart of Markham, easily accessible from Toronto and the GTA.
+            </p>
+          </div>
+
+          <div class="office-hours-grid">
+            
+            <div class="hours-card">
+              <h4 class="h4">
+                <ion-icon name="time-outline"></ion-icon>
+                Office Hours
+              </h4>
+              <ul class="hours-list">
+                <li class="hours-item">
+                  <span class="day">Monday</span>
+                  <span class="time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="hours-item">
+                  <span class="day">Tuesday</span>
+                  <span class="time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="hours-item">
+                  <span class="day">Wednesday</span>
+                  <span class="time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="hours-item">
+                  <span class="day">Thursday</span>
+                  <span class="time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="hours-item">
+                  <span class="day">Friday</span>
+                  <span class="time">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="hours-item">
+                  <span class="day">Saturday</span>
+                  <span class="time">10:00 AM - 4:00 PM</span>
+                </li>
+                <li class="hours-item closed">
+                  <span class="day">Sunday</span>
+                  <span class="time">Closed</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="directions-card">
+              <h4 class="h4">
+                <ion-icon name="navigate-outline"></ion-icon>
+                How to Find Us
+              </h4>
+              <ul class="directions-list">
+                <li>
+                  <strong>By Car:</strong> Free parking available. Located on Woodbine Ave, 
+                  just north of Highway 7.
+                </li>
+                <li>
+                  <strong>By Transit:</strong> YRT/Viva accessible. Take bus route 8 Woodbine 
+                  or route 88 Woodbine South.
+                </li>
+                <li>
+                  <strong>From Toronto:</strong> 30-40 minutes via Highway 404 North or 
+                  DVP to Highway 7 East.
+                </li>
+                <li>
+                  <strong>From Richmond Hill:</strong> 15 minutes south on Woodbine Avenue.
+                </li>
+                <li>
+                  <strong>Accessibility:</strong> Wheelchair accessible entrance and facilities available.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section">
+        <div class="container">
+          <h2 class="h2">Ready to Start Your Project?</h2>
+          <p class="cta-text">
+            Let's bring your vision to life. Whether you need a new website, digital marketing, 
+            or business consulting, we're here to help you succeed.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="tel:+16479472456" class="btn-white">
+              <ion-icon name="call-outline"></ion-icon>
+              Call Now
+            </a>
+            <a href="/cdn-cgi/l/email-protection#274e49414867574b464954464b42094446" class="btn-white">
+              <ion-icon name="mail-outline"></ion-icon>
+              Send Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- CUSTOM JS -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- FORM HANDLING SCRIPT -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      const successMsg = document.getElementById('success-message');
+      const errorMsg = document.getElementById('error-message');
+      
+      // Hide any existing messages
+      successMsg.classList.remove('show');
+      errorMsg.classList.remove('show');
+      
+      // Simulate form submission (replace with actual form handling)
+      setTimeout(() => {
+        successMsg.classList.add('show');
+        
+        // Reset form
+        this.reset();
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMsg.classList.remove('show');
+        }, 5000);
+      }, 500);
+      
+      // In production, replace with actual AJAX submission:
+      /*
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: document.getElementById('first-name').value,
+          lastName: document.getElementById('last-name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          company: document.getElementById('company').value,
+          service: document.getElementById('service').value,
+          budget: document.getElementById('budget').value,
+          message: document.getElementById('message').value
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        successMsg.classList.add('show');
+        this.reset();
+      })
+      .catch(error => {
+        errorMsg.classList.add('show');
+      });
+      */
+    });
+  </script>
+
+  <!-- IONICON -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

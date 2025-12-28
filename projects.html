@@ -5,40 +5,299 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Web Development Projects - Plansale</title>
-  <meta name="keywords" content="web development, website design, digital marketing, responsive websites, portfolio, client projects, Plansale">
-  <meta name="description" content="Explore our portfolio of successful web development projects. See how we design, build, and scale innovative websites for clients across various industries.">
+  <title>Our Projects Portfolio - Web Design, Branding & Creative Work | Plansale</title>
+  <meta name="description" content="Explore our portfolio of successful projects including websites, commercial signs, interior design, graphic design, and branding. See how we bring visions to life across Canada.">
+  <meta name="keywords" content="web development portfolio, design projects, branding case studies, commercial signage, interior design, graphic design, Toronto projects">
 
-  <!-- 
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
-    - google font link
-  -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <style>
+    /* Projects Page Specific Styles */
+    .projects-hero {
+      background: linear-gradient(135deg,#F43F5E,#0B1B3A 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .projects-hero .h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .projects-hero .hero-text {
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: var(--fs-6);
+      line-height: 1.6;
+    }
+
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .category-btn {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition-1);
+      border: 2px solid transparent;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+      background: var(--white);
+      color: var(--majorelle-blue);
+      border-color: var(--white);
+    }
+
+    .project-category-section {
+      padding: 80px 0;
+      scroll-margin-top: 80px;
+    }
+
+    .project-category-section:nth-child(even) {
+      background-color: var(--ghost-white);
+    }
+
+    .category-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .category-badge {
+      display: inline-block;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: var(--fs-9);
+      font-weight: var(--fw-700);
+      margin-bottom: 15px;
+    }
+
+    .category-header .h2 {
+      margin-bottom: 15px;
+      color: var(--raisin-black-1);
+    }
+
+    .category-description {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      line-height: 1.6;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-item {
+      background: var(--white);
+      border-radius: var(--radius-15);
+      overflow: hidden;
+      box-shadow: var(--shadow-3);
+      transition: var(--transition-2);
+      position: relative;
+    }
+
+    .project-item:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-4);
+    }
+
+    .project-image {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+      background: var(--gainsboro);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-2);
+    }
+
+    .project-item:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, hsla(241, 77%, 63%, 0.9), hsla(267, 76%, 57%, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition-1);
+    }
+
+    .project-item:hover .project-overlay {
+      opacity: 1;
+    }
+
+    .view-project-btn {
+      background: var(--white);
+      color: var(--majorelle-blue);
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(20px);
+      transition: var(--transition-1);
+    }
+
+    .project-item:hover .view-project-btn {
+      transform: translateY(0);
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-title {
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--cool-gray);
+      font-size: var(--fs-9);
+    }
+
+    .meta-item ion-icon {
+      font-size: 16px;
+      color: var(--majorelle-blue);
+    }
+
+    .project-description {
+      color: var(--slate-gray);
+      font-size: var(--fs-8);
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      background: var(--ghost-white);
+      color: var(--cool-gray);
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: var(--fs-9);
+    }
+
+    .placeholder-section {
+      background: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+      padding: 60px;
+      border-radius: var(--radius-20);
+      text-align: center;
+      margin-top: 40px;
+      border: 2px dashed var(--gainsboro);
+    }
+
+    .placeholder-section ion-icon {
+      font-size: 80px;
+      color: var(--cool-gray);
+      margin-bottom: 20px;
+    }
+
+    .placeholder-section .h3 {
+      color: var(--slate-gray);
+      margin-bottom: 10px;
+    }
+
+    .placeholder-section .placeholder-text {
+      color: var(--cool-gray);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .stats-section {
+      background: var(--majorelle-blue);
+      padding: 60px 0;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .stat-item {
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-size: var(--fs-1);
+      font-weight: var(--fw-700);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: var(--fs-7);
+      opacity: 0.9;
+    }
+  </style>
 
 </head>
 
 <body id="top">
 
-  <!-- 
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
 
@@ -61,19 +320,23 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#service" class="navbar-link" data-nav-link>Services</a>
+            <a href="services.html" class="navbar-link" data-nav-link>Services</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#feature" class="navbar-link" data-nav-link>Features</a>
+            <a href="projects.html" class="navbar-link active" data-nav-link>Projects</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#project" class="navbar-link" data-nav-link>Projects</a>
+            <a href="funding.html" class="navbar-link" data-nav-link>Funding</a>
           </li>
 
           <li class="navbar-item">
-            <a href="nfccards.html" class="navbar-link" data-nav-link>Products</a>
+            <a href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#contact" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
         </ul>
@@ -84,405 +347,553 @@
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="#" class="btn btn-primary has-before has-after">Let’s Talk 👋</a>
+      <a href="contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
 
-      <!-- 
-        - #HERO
-      -->
-
-      <!-- 
-        - #projects
-      -->
-
-      <section class="section projects" id="projects" aria-label="projects">
+      <!-- HERO SECTION -->
+      <section class="projects-hero">
         <div class="container">
-      
-          <h2 class="h2 section-title text-left">Explore Our Web Development Projects</h2>
-          <p class="section-description text-left">
-            The following projects are examples of our successful web development work. When you choose to work with us, we will present you with more project samples tailored to your specific needs, and we will guide you through every step to bring your vision to life! Moreover, if you decide to refresh your website with a new look and feel, we can assist you in making those changes once per year, completely free of charge!
+          <h1 class="h1">Our Project Portfolio</h1>
+          <p class="hero-text">
+            Explore our diverse range of successful projects across web development, design, and branding. 
+            Each project showcases our commitment to excellence and innovation.
           </p>
-          <br><br>
-
-          <ul class="grid-list">
-  
-            <li>
-              <a href="http://jiayicanada.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/lingjoy.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Ling Joy Immigration Ltd - Professional Immigration Services in Canada, offering various immigration programs.">
-                </div>
-              </a>
-            </li>
           
-            <li>
-              <a href="https://evergreenthai.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/evergreenthai.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Evergreen Thai Restaurant - Authentic Thai Cuisine in Canada, offering a variety of traditional Thai dishes.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://www.luxenovareno.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/luxenovareno.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Luxe Nova Reno - High-Quality Residential and Commercial Renovation Services in Toronto.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://sevagekick.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/savegekick.jpg" width="300" height="auto" loading="lazy" 
-                    alt="SavageKick - Premium Streetwear and Sneakers Store in Toronto, Canada. Featuring Nike Air Jordan, Adidas Yeezy, and luxury watches like Rolex.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://feijiaguoji.ca/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/feijiguoji.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Feijiaguoji - Toronto-based Canadian Immigration Consulting Firm. Specializing in immigration applications, visa services, school admissions, and job placement across Canada.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://www.cachina.ca/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/jiahuaimmigration.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Jiahua Immigration - Leading Chinese Immigration Firm in Canada. Specializing in Canadian immigration, visas, and investment services with 8 branches in Canada and 2 in China.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://gtmoving.ca/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/gtmoving.jpg" width="300" height="auto" loading="lazy" 
-                    alt="GT Moving - Trusted and Professional Chinese Moving Company in Toronto. Fully insured, well-equipped, and known for patience and reliability.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://www.princetonwellnesscentre.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/princetonwellnesscentre.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Princeton Wellness Centre - Expert Massage and Acupuncture Services Combining Traditional Chinese and Western Techniques in a Holistic Healing Approach.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://busankoreabbq.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/busankoreabbq.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Busan Korean BBQ - Premium Meats, Fresh Vegetables, and Authentic Korean Dishes in Toronto. Enjoy a memorable Korean BBQ dining experience with our dedicated team.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://www.ankylos.net/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/ankylos.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Ankylos - High-End Streetwear and Trendy Fashion Brand. Offering a unique collection of premium streetwear styles.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="https://elitedisplaycase.com/" target="_blank">
-                <div class="projects-card">
-                  <img src="./assets/images/elitedisplaycase.jpg" width="300" height="auto" loading="lazy" 
-                    alt="Elite Display Case - Premium Display Cases for Collectibles, Watches, Sneakers, and High-End Merchandise.">
-                </div>
-              </a>
-            </li>
-          
-            <li>
-              <a href="#" class="link-card" style="--color: 203, 97%, 75%">
-                <span class="span">04 More projects</span>
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-            </li>
-          
-          </ul>
-          
-          
-      
+          <div class="category-nav">
+            <a href="#website" class="category-btn active">Websites</a>
+            <a href="#signs" class="category-btn">Commercial Projects</a>
+            <a href="#interior" class="category-btn">Interior Design</a>
+            <a href="#graphic" class="category-btn">Graphic Design</a>
+            <a href="#branding" class="category-btn">Branding</a>
+          </div>
         </div>
       </section>
-      
 
-
-
-
-
-      <!-- 
-        - #FEATURE
-      -->
-
-      <section class="section feature" id="feature" aria-label="feature">
+      <!-- WEBSITE PROJECTS -->
+      <section class="project-category-section" id="website">
         <div class="container">
+          
+          <div class="category-header">
+            <span class="category-badge">WEB DEVELOPMENT</span>
+            <h2 class="h2">Website Projects</h2>
+            <p class="category-description">
+              Successful web development projects featuring custom websites for restaurants, immigration firms, 
+              retail businesses, and service providers across Canada. Each site is built with modern technologies 
+              and optimized for performance.
+            </p>
+          </div>
 
-          <figure class="feature-banner">
-            <img src="./assets/images/feature-banner.png" width="582" height="585" loading="lazy" alt="feature banner"
-              class="w-100">
-          </figure>
+          <div class="project-grid">
 
-          <div class="feature-content">
-
-            <p class="section-subtitle has-before">Why Choose us</p>
-
-            <h2 class="h2 section-title">
-              Expertise in Navigating Financial <span class="has-before">challenges</span>
-            </h2>
-
-            <ul class="feature-list">
-
-              <li>
-                <div class="feature-card">
-
-                  <div class="card-icon" style="--color: 174, 77%, 50%">
-                    <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div>
-                    <h3 class="h3 card-title">Efficient Workflow</h3>
-
-                    <p class="card-text">
-                      Excelling in swiftly designing, building, and scaling beautiful and effective projects.
-                    </p>
-                  </div>
-
+            <!-- Project 1: Ling Joy Immigration -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/lingjoy.jpg" alt="Ling Joy Immigration Website">
+                <div class="project-overlay">
+                  <a href="http://jiayicanada.com/" target="_blank" class="view-project-btn">View Live Site</a>
                 </div>
-              </li>
-
-              <li>
-                <div class="feature-card">
-
-                  <div class="card-icon" style="--color: 241, 77%, 63%;">
-                    <ion-icon name="people-sharp" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div>
-                    <h3 class="h3 card-title">Dedicated Team</h3>
-
-                    <p class="card-text">
-                      being committed to crafting, launching, and expanding top-notch designs with precision and care.
-                    </p>
-                  </div>
-
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Ling Joy Immigration</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2024
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
                 </div>
-              </li>
-
-              <li>
-                <div class="feature-card">
-
-                  <div class="card-icon" style="--color: 343, 98%, 60%;">
-                    <ion-icon name="headset-sharp" aria-hidden="true"></ion-icon>
-                  </div>
-
-                  <div>
-                    <h3 class="h3 card-title">24/7 Support</h3>
-
-                    <p class="card-text">
-                      Supporting you around the clock, ensuring your projects are beautifully executed and seamlessly delivered.
-                    </p>
-                  </div>
-
+                <p class="project-description">
+                  Professional immigration consulting website with multilingual support, service listings, 
+                  and client portal integration.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">WordPress</span>
+                  <span class="project-tag">Multilingual</span>
+                  <span class="project-tag">SEO</span>
                 </div>
-              </li>
+              </div>
+            </div>
 
-            </ul>
+            <!-- Project 2: Evergreen Thai -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/evergreenthai.jpg" alt="Evergreen Thai Restaurant Website">
+                <div class="project-overlay">
+                  <a href="https://evergreenthai.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Evergreen Thai Restaurant</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2024
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Markham, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  Modern restaurant website featuring online menu, reservation system, and gallery showcase 
+                  of authentic Thai cuisine.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Restaurant</span>
+                  <span class="project-tag">Online Ordering</span>
+                  <span class="project-tag">Mobile-First</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Luxe Nova Reno -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/luxenovareno.jpg" alt="Luxe Nova Reno Website">
+                <div class="project-overlay">
+                  <a href="https://www.luxenovareno.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Luxe Nova Reno</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2024
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  High-end renovation company website with project portfolio, service pages, and quote 
+                  request functionality.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Portfolio</span>
+                  <span class="project-tag">Lead Generation</span>
+                  <span class="project-tag">Custom Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: SavageKick -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/savegekick.jpg" alt="SavageKick Store Website">
+                <div class="project-overlay">
+                  <a href="https://sevagekick.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">SavageKick Streetwear</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2023
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  E-commerce platform for premium streetwear featuring Nike, Adidas, and luxury watch brands 
+                  with secure payment processing.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">E-commerce</span>
+                  <span class="project-tag">Shopify</span>
+                  <span class="project-tag">Payment Gateway</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5: Feijia Immigration -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/feijiguoji.jpg" alt="Feijia Immigration Website">
+                <div class="project-overlay">
+                  <a href="https://feijiaguoji.ca/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Feijia International</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2023
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  Comprehensive immigration consulting platform with visa services, school admissions, 
+                  and job placement features.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Consulting</span>
+                  <span class="project-tag">Bilingual</span>
+                  <span class="project-tag">CRM Integration</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6: Jiahua Immigration -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/jiahuaimmigration.jpg" alt="Jiahua Immigration Website">
+                <div class="project-overlay">
+                  <a href="https://www.cachina.ca/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Jiahua Immigration</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2023
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Multi-Location
+                  </span>
+                </div>
+                <p class="project-description">
+                  Leading Chinese immigration firm with 8 Canadian branches. Multi-location website with 
+                  service directories and consultation booking.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Enterprise</span>
+                  <span class="project-tag">Multi-Location</span>
+                  <span class="project-tag">Booking System</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 7: GT Moving -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/gtmoving.jpg" alt="GT Moving Website">
+                <div class="project-overlay">
+                  <a href="https://gtmoving.ca/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">GT Moving Company</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2023
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  Professional moving company website with instant quote calculator, service areas map, 
+                  and customer testimonials.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Service Business</span>
+                  <span class="project-tag">Quote System</span>
+                  <span class="project-tag">Local SEO</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 8: Princeton Wellness -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/princetonwellnesscentre.jpg" alt="Princeton Wellness Centre Website">
+                <div class="project-overlay">
+                  <a href="https://www.princetonwellnesscentre.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Princeton Wellness Centre</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2022
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  Holistic health clinic website featuring online appointment booking, practitioner profiles, 
+                  and service information.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Healthcare</span>
+                  <span class="project-tag">Appointment Booking</span>
+                  <span class="project-tag">AODA Compliant</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 9: Busan Korean BBQ -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/busankoreabbq.jpg" alt="Busan Korean BBQ Website">
+                <div class="project-overlay">
+                  <a href="https://busankoreabbq.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Busan Korean BBQ</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2022
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  Authentic Korean BBQ restaurant with interactive menu, table reservation system, 
+                  and photo gallery of dishes.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Restaurant</span>
+                  <span class="project-tag">Reservation</span>
+                  <span class="project-tag">Gallery</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 10: Ankylos -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/ankylos.jpg" alt="Ankylos Fashion Website">
+                <div class="project-overlay">
+                  <a href="https://www.ankylos.net/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Ankylos Streetwear</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2022
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Toronto, ON
+                  </span>
+                </div>
+                <p class="project-description">
+                  High-end fashion brand e-commerce site with lookbook galleries, size guides, 
+                  and seamless checkout experience.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Fashion</span>
+                  <span class="project-tag">E-commerce</span>
+                  <span class="project-tag">Brand Site</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 11: Elite Display Case -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="./assets/images/elitedisplaycase.jpg" alt="Elite Display Case Website">
+                <div class="project-overlay">
+                  <a href="https://elitedisplaycase.com/" target="_blank" class="view-project-btn">View Live Site</a>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Elite Display Case</h3>
+                <div class="project-meta">
+                  <span class="meta-item">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    2022
+                  </span>
+                  <span class="meta-item">
+                    <ion-icon name="location-outline"></ion-icon>
+                    Canada-Wide
+                  </span>
+                </div>
+                <p class="project-description">
+                  Premium display case retailer with product configurator, custom order forms, 
+                  and shipping calculator.
+                </p>
+                <div class="project-tags">
+                  <span class="project-tag">Retail</span>
+                  <span class="project-tag">Product Configurator</span>
+                  <span class="project-tag">Custom Orders</span>
+                </div>
+              </div>
+            </div>
 
           </div>
 
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- 
-        - #Projects
-      -->
-
-      <section class="section blog" id="blog" aria-label="blog">
+      <!-- COMMERCIAL PROJECTS -->
+      <section class="project-category-section" id="commercial">
         <div class="container">
+          
+          <div class="category-header">
+            <span class="category-badge">Commercial Display </span>
+            <h2 class="h2">Commercial Projects</h2>
+            <p class="category-description">
+              Professional commercial signage solutions including storefront signs, interior displays, wayfinding systems,
+              custom store fixtures, and light renovation support—helping businesses across the GTA build cohesive,
+              branded retail environments from signage to in-store experience.
+            </p>
+          </div>
 
-          <p class="section-subtitle text-center has-before">Blog Post</p>
+          <div class="placeholder-section">
+            <ion-icon name="construct-outline"></ion-icon>
+            <h3 class="h3">Projects Coming Soon</h3>
+            <p class="placeholder-text">
+              We're currently compiling our commercial signage portfolio. Check back soon to see our work 
+              in LED signs, channel letters, pylon signs, and more.
+            </p>
+          </div>
 
-          <h2 class="h2 section-title text-center">
-            Popular <span class="has-before">Blog Post</span>
-          </h2>
+        </div>
+      </section>
 
-          <ul class="blog-list">
+      <!-- INTERIOR DESIGN -->
+      <section class="project-category-section" id="interior">
+        <div class="container">
+          
+          <div class="category-header">
+            <span class="category-badge">INTERIOR DESIGN</span>
+            <h2 class="h2">Interior Design Projects</h2>
+            <p class="category-description">
+              Creative interior design solutions for commercial and residential spaces including restaurants, 
+              retail stores, offices, and boutique environments.
+            </p>
+          </div>
 
-            <li>
-              <div class="blog-card large">
-                <a href="nfccards.html">
-                  <figure class="card-banner">
-                    <img src="./assets/images/blog-1.jpg" width="644" height="363" loading="lazy"
-                      alt="NFC Tags: The Future of Business Interaction" class="img-cover">
-                  </figure>
-                </a>
-            
-                <div class="card-content">
-            
-                  <div class="wrapper">
-                    <a href="nfccards.html" class="tag">Development</a>
-            
-                    <a href="nfccards.html" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-                      <span class="span">July 22, 2024</span>
-                    </a>
-                  </div>
-            
-                  <h3>
-                    <a href="nfccards.html" class="card-title">NFC Tags: The Future of Business Interaction</a>
-                  </h3>
-            
-                  <a href="nfccards.html" class="card-text">
-                    Consider the example of a restaurant that wants to boost its online presence by encouraging more customer reviews. With an NFC-enabled Google Review card placed at each table, customers no longer need to search for the restaurant online to leave feedback. They can simply tap their phone on the card, instantly opening the review page. This seamless experience not only enhances customer convenience but also increases the likelihood of receiving more reviews, which can significantly impact the restaurant’s online reputation.
-                  </a>
-            
-                </div>
-            
-              </div>
-            </li>
+          <div class="placeholder-section">
+            <ion-icon name="color-palette-outline"></ion-icon>
+            <h3 class="h3">Portfolio In Development</h3>
+            <p class="placeholder-text">
+              Our interior design showcase is being prepared. Soon you'll see our work in space planning, 
+              furniture selection, lighting design, and complete interior transformations.
+            </p>
+          </div>
 
-            <li>
-              <div class="blog-card">
+        </div>
+      </section>
 
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-2.jpg" width="202" height="162" loading="lazy"
-                    alt="Godaddy user flow solution for every individual" class="img-cover">
-                </figure>
+      <!-- GRAPHIC DESIGN -->
+      <section class="project-category-section" id="graphic">
+        <div class="container">
+          
+          <div class="category-header">
+            <span class="category-badge">GRAPHIC DESIGN</span>
+            <h2 class="h2">Graphic Design Projects</h2>
+            <p class="category-description">
+              Visual design work including marketing materials, social media graphics, print collateral, 
+              packaging design, and promotional materials.
+            </p>
+          </div>
 
-                <div class="card-content">
+          <div class="placeholder-section">
+            <ion-icon name="image-outline"></ion-icon>
+            <h3 class="h3">Gallery Coming Soon</h3>
+            <p class="placeholder-text">
+              We're organizing our graphic design portfolio featuring logos, brochures, posters, 
+              packaging, and digital graphics. Stay tuned!
+            </p>
+          </div>
 
-                  <div class="wrapper">
-                    <a href="#" class="tag">Development</a>
+        </div>
+      </section>
 
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+      <!-- BRANDING DESIGN -->
+      <section class="project-category-section" id="branding">
+        <div class="container">
+          
+          <div class="category-header">
+            <span class="category-badge">BRANDING & IDENTITY</span>
+            <h2 class="h2">Branding Design Projects</h2>
+            <p class="category-description">
+              Complete brand identity development including logo design, brand guidelines, color systems, 
+              typography, and comprehensive brand strategy.
+            </p>
+          </div>
 
-                      <span class="span">July 21, 2023</span>
-                    </a>
-                  </div>
+          <div class="placeholder-section">
+            <ion-icon name="diamond-outline"></ion-icon>
+            <h3 class="h3">Brand Showcase In Progress</h3>
+            <p class="placeholder-text">
+              Our branding case studies are being finalized. Soon you'll see complete brand transformations 
+              from concept to implementation.
+            </p>
+          </div>
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Godaddy user flow solution for every individual</a>
-                  </h3>
+        </div>
+      </section>
 
-                </div>
+      <!-- STATS SECTION -->
+      <section class="stats-section">
+        <div class="container">
+          <h2 class="h2" style="color: var(--white); margin-bottom: 10px;">Our Track Record</h2>
+          <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">
+            Numbers that showcase our commitment to delivering exceptional results
+          </p>
+          
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Active Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support Available</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-3.png" width="202" height="162" loading="lazy"
-                    alt="Business solution for every individual" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="wrapper">
-                    <a href="#" class="tag">Development</a>
-
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">July 21, 2022</span>
-                    </a>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Business solution for every individual</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/blog-4.png" width="202" height="162" loading="lazy"
-                    alt="How to gain pro experience ar figma update version" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="wrapper">
-                    <a href="#" class="tag">Development</a>
-
-                    <a href="#" class="publish-date">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">July 21, 2021</span>
-                    </a>
-                  </div>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">How to gain pro experience ar figma update version</a>
-                  </h3>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+      <!-- CTA SECTION -->
+      <section class="section" style="padding: 80px 0; text-align: center;">
+        <div class="container">
+          <h2 class="h2" style="margin-bottom: 20px;">Ready to Start Your Project?</h2>
+          <p style="max-width: 600px; margin: 0 auto 30px; color: var(--cool-gray); font-size: var(--fs-6);">
+            Let's bring your vision to life. Contact us today for a free consultation and quote.
+          </p>
+          <a href="index.html#contact" class="btn btn-primary has-before has-after">Get Started</a>
         </div>
       </section>
 
     </article>
   </main>
 
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
 
@@ -493,13 +904,95 @@
           <p class="footer-list-title">About Plansale</p>
 
           <p class="footer-text">
-            Plansale designs, builds, and scales innovative solutions, driving success with creativity and precision.
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
           </p>
 
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
           <p class="footer-text">
-            <strong>Tel:</strong> <a href="tel:+16479472456">1 (647) 947-2456</a><br>
-            <strong>Email:</strong> <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
-            <strong>Address:</strong> 9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
           </p>
 
           <ul class="social-list">
@@ -511,7 +1004,7 @@
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
 
@@ -523,153 +1016,32 @@
 
             <li>
               <a href="#" class="social-link">
-                <ion-icon name="logo-skype"></ion-icon>
+                <ion-icon name="logo-redbook"></ion-icon>
               </a>
             </li>
+
           </ul>
+        </ul>  
 
-        </div>
-
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Useful Links</p>
-          </li>
-
-          <li>
-            <a href="index.html" class="footer-link">Contact us</a>
-          </li>
-
-          <li>
-            <a href="nfccards.html" class="footer-link">NFC Cards</a>
-          </li>
-
-          <li>
-            <a href="projects.html" class="footer-link">Building Websites</a>
-          </li>
-
-          <li>
-            <a href="projects.html" class="footer-link">Explore</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Terms & Services</a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Community</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Help Center</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Partners</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Suggestions</a>
-          </li>
-
-          <li>
-            <a href="nfccards.html" class="footer-link">Products</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Newsletters</a>
-          </li>
-        </ul>
-
-        <ul class="footer-list">
-          <li>
-            <p class="footer-list-title">Instagram Post</p>
-          </li>
-
-          <li>
-            <ul class="insta-post">
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-1.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-2.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-3.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-4.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-5.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-              <li>
-                <div class="insta-card">
-                  <figure class="post-banner">
-                    <img src="./assets/images/insta-post-6.jpg" width="77" height="63" loading="lazy" alt="instagram post" class="img-cover">
-                  </figure>
-                  <a href="#" class="card-content">
-                    <ion-icon name="logo-instagram" aria-hidden="true"></ion-icon>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
+ 
 
       </div>
 
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSUTLING.
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
         </p>
 
         <ul class="footer-bottom-list">
           <li>
-            <a href="#" class="footer-bottom-link">Terms and conditions</a>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
           </li>
           <li>
-            <a href="#" class="footer-bottom-link">Privacy policy</a>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
           </li>
           <li>
-            <a href="#" class="footer-bottom-link">Login / Signup</a>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
           </li>
         </ul>
 
@@ -678,31 +1050,16 @@
     </div>
   </footer>
 
-
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
+  <!-- BACK TO TOP -->
   <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
   </a>
 
+  <!-- CUSTOM JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="./assets/js/script.js" defer></script
 
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
+  <!-- IONICON -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

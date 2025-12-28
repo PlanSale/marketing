@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO/GEO Implementation Services - Monthly Subscription | Plansale</title>
+  <meta name="description" content="Subscribe to our comprehensive SEO and GEO services. Dominate search engines and AI-powered results with our expert optimization strategies.">
+  <meta name="keywords" content="SEO services, GEO services, generative engine optimization, search engine optimization, AI search optimization, monthly SEO">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Booking Page Specific Styles */
+    .booking-hero {
+      background: linear-gradient(180deg, #764ba2, #667eea 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .booking-hero .h1 {
+      color: var(--white);
+      margin-bottom: 15px;
+      font-size: var(--fs-2);
+    }
+
+    .booking-hero .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: var(--fs-5);
+      margin-bottom: 10px;
+    }
+
+    .booking-hero .price-tag {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .booking-layout {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 992px) {
+      .booking-layout {
+        grid-template-columns: 1fr 400px;
+      }
+    }
+
+    /* Main Form Section */
+    .booking-form-section {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: var(--shadow-2);
+    }
+
+    .form-section-title {
+      font-size: var(--fs-4);
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--ghost-white);
+    }
+
+    .form-section-subtitle {
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-500);
+      margin-bottom: 10px;
+      font-size: var(--fs-6);
+    }
+
+    .form-label .required {
+      color: #ef4444;
+      margin-left: 3px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      font-size: var(--fs-6);
+      font-family: inherit;
+      transition: var(--transition-1);
+      background: var(--white);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--majorelle-blue);
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-hint {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+      margin-top: 6px;
+    }
+
+    /* Package Selection */
+    .package-grid {
+      display: grid;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .package-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .package-card {
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      padding: 25px;
+      cursor: pointer;
+      transition: var(--transition-1);
+      position: relative;
+    }
+
+    .package-card:hover {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.05);
+    }
+
+    .package-card.selected {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.1);
+    }
+
+    .package-card.selected::before {
+      content: "✓";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--fw-700);
+    }
+
+    .package-name {
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+    }
+
+    .package-price {
+      font-size: var(--fs-3);
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+      margin-bottom: 5px;
+    }
+
+    .package-period {
+      font-size: var(--fs-8);
+      color: var(--cool-gray);
+      margin-bottom: 15px;
+    }
+
+    .package-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .package-features li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    .package-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+    }
+
+    .package-badge {
+      display: inline-block;
+      background: var(--sunglow);
+      color: var(--raisin-black-1);
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: var(--fs-9);
+      font-weight: var(--fw-700);
+      margin-bottom: 10px;
+    }
+
+    /* Order Summary Sidebar */
+    .order-summary {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: var(--shadow-2);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .summary-title {
+      font-size: var(--fs-4);
+      color: var(--raisin-black-1);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--ghost-white);
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--ghost-white);
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+    }
+
+    .summary-label {
+      color: var(--cool-gray);
+      font-size: var(--fs-6);
+    }
+
+    .summary-value {
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-700);
+      font-size: var(--fs-6);
+    }
+
+    .summary-total {
+      background: var(--ghost-white);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .summary-total .summary-label {
+      font-size: var(--fs-5);
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-700);
+    }
+
+    .summary-total .summary-value {
+      font-size: var(--fs-3);
+      color: var(--majorelle-blue);
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+    }
+
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+    }
+
+    /* Payment Section */
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .payment-method {
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-1);
+    }
+
+    .payment-method:hover {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.05);
+    }
+
+    .payment-method.selected {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.1);
+    }
+
+    .payment-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .payment-name {
+      font-weight: var(--fw-500);
+      color: var(--raisin-black-1);
+      font-size: var(--fs-7);
+    }
+
+    /* Checkbox Styles */
+    .checkbox-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .checkbox-label {
+      flex: 1;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    /* Submit Button */
+    .submit-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px solid var(--ghost-white);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 18px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      cursor: pointer;
+      transition: var(--transition-1);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .secure-notice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--ghost-white);
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    .trust-badge ion-icon {
+      color: var(--majorelle-blue);
+      font-size: 20px;
+    }
+
+    /* Alert Box */
+    .alert-box {
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .alert-info {
+      background: rgba(102, 126, 234, 0.1);
+      border-left: 4px solid var(--majorelle-blue);
+    }
+
+    .alert-icon {
+      font-size: 24px;
+      color: var(--majorelle-blue);
+      flex-shrink: 0;
+    }
+
+    .alert-content {
+      flex: 1;
+    }
+
+    .alert-title {
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+      margin-bottom: 5px;
+      font-size: var(--fs-7);
+    }
+
+    .alert-text {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="../index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="#contact" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="booking-hero">
+        <div class="container">
+          <p class="subtitle">🚀 SEO/GEO Implementation Services</p>
+          <h1 class="h1">Dominate Search Engines & AI Results</h1>
+          <div class="price-tag">
+            Starting at CAD $500 per Month
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING FORM SECTION -->
+      <div class="booking-container">
+        <div class="booking-layout">
+
+          <!-- Main Form -->
+          <div class="booking-form-section">
+            
+            <!-- Alert Info -->
+            <div class="alert-box alert-info">
+              <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Monthly Subscription Service</div>
+                <div class="alert-text">
+                  Our SEO/GEO services are billed monthly. You can cancel anytime with 30 days notice. First month includes comprehensive audit and strategy setup.
+                </div>
+              </div>
+            </div>
+
+            <form id="bookingForm">
+              
+              <!-- Personal Information -->
+              <div class="form-section">
+                <h3 class="form-section-title">Contact Information</h3>
+                <p class="form-section-subtitle">Please provide your contact details</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      First Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="firstName" placeholder="John" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Last Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="lastName" placeholder="Doe" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Email Address <span class="required">*</span>
+                    </label>
+                    <input type="email" class="form-input" id="email" placeholder="john@example.com" required>
+                    <div class="form-hint">Monthly reports will be sent here</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Phone Number <span class="required">*</span>
+                    </label>
+                    <input type="tel" class="form-input" id="phone" placeholder="+1 (647) 123-4567" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Company Name <span class="required">*</span>
+                  </label>
+                  <input type="text" class="form-input" id="company" placeholder="Your Business Name" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Website URL 
+                  </label>
+                  <input type="url" class="form-input" id="website" placeholder="https://www.yourbusiness.com" required>
+                  <div class="form-hint">The website we'll be optimizing</div>
+                </div>
+              </div>
+
+              <!-- Business & SEO Information -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Business & SEO Information</h3>
+                <p class="form-section-subtitle">Help us understand your optimization needs</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Industry <span class="required">*</span>
+                    </label>
+                    <select class="form-select" id="industry" required>
+                      <option value="">Select your industry</option>
+                      <option value="retail">Retail & E-commerce</option>
+                      <option value="restaurant">Restaurant & Food Service</option>
+                      <option value="healthcare">Healthcare & Wellness</option>
+                      <option value="professional">Professional Services</option>
+                      <option value="technology">Technology & Software</option>
+                      <option value="real-estate">Real Estate</option>
+                      <option value="construction">Construction & Trades</option>
+                      <option value="automotive">Automotive</option>
+                      <option value="beauty">Beauty & Salon</option>
+                      <option value="education">Education & Training</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Current Monthly Website Visitors
+                    </label>
+                    <select class="form-select" id="currentTraffic">
+                      <option value="">Select range</option>
+                      <option value="0-500">0 - 500 visitors</option>
+                      <option value="500-2k">500 - 2,000 visitors</option>
+                      <option value="2k-5k">2,000 - 5,000 visitors</option>
+                      <option value="5k-10k">5,000 - 10,000 visitors</option>
+                      <option value="10k-25k">10,000 - 25,000 visitors</option>
+                      <option value="25k+">25,000+ visitors</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Primary SEO Goals <span class="required">*</span>
+                  </label>
+                  <select class="form-select" id="seoGoals" required>
+                    <option value="">Select primary goal</option>
+                    <option value="local-visibility">Increase Local Visibility</option>
+                    <option value="organic-traffic">Increase Organic Traffic</option>
+                    <option value="lead-generation">Generate More Leads</option>
+                    <option value="brand-authority">Build Brand Authority</option>
+                    <option value="e-commerce-sales">Increase E-commerce Sales</option>
+                    <option value="competitive-ranking">Outrank Competitors</option>
+                    <option value="ai-search">Appear in AI Search Results</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Target Geographic Area
+                  </label>
+                  <input type="text" class="form-input" id="targetArea" placeholder="e.g., Toronto, GTA, Ontario, Canada">
+                  <div class="form-hint">Leave blank if targeting nationwide or global</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Current SEO Status
+                  </label>
+                  <select class="form-select" id="currentSEO">
+                    <option value="">Select status</option>
+                    <option value="no-seo">No SEO work done yet</option>
+                    <option value="diy-seo">DIY SEO (doing it ourselves)</option>
+                    <option value="previous-agency">Worked with agency before</option>
+                    <option value="in-house-team">Have in-house SEO team</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Top 3 Keywords/Services You Want to Rank For
+                  </label>
+                  <textarea class="form-textarea" id="targetKeywords" placeholder="e.g., 
+1. Toronto digital marketing agency
+2. SEO services near me
+3. local business marketing"></textarea>
+                  <div class="form-hint">This helps us understand your target market</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Additional Notes or Specific Challenges
+                  </label>
+                  <textarea class="form-textarea" id="additionalNotes" placeholder="Tell us about any specific SEO challenges, competitor concerns, or special requirements..."></textarea>
+                </div>
+              </div>
+
+              <!-- Package Selection -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Select Your Package</h3>
+                <p class="form-section-subtitle">Choose the plan that fits your business needs</p>
+
+                <input type="hidden" id="selectedPackage" required>
+                
+                <div class="package-grid">
+                  <!-- Starter Package -->
+                  <div class="package-card" onclick="selectPackage(this, 'starter', 500)">
+                    <div class="package-name">Starter</div>
+                    <div class="package-price">$500</div>
+                    <div class="package-period">per month + HST</div>
+                    <ul class="package-features">
+                      <li>Technical SEO audit</li>
+                      <li>On-page optimization</li>
+                      <li>Google Business Profile</li>
+                      <li>Monthly reports</li>
+                      <li>Up to 10 keywords</li>
+                    </ul>
+                  </div>
+
+                  <!-- Growth Package -->
+                  <div class="package-card" onclick="selectPackage(this, 'growth', 1000)">
+                    <span class="package-badge">Popular</span>
+                    <div class="package-name">Growth</div>
+                    <div class="package-price">$1,000</div>
+                    <div class="package-period">per month + HST</div>
+                    <ul class="package-features">
+                      <li>Everything in Starter</li>
+                      <li>Content strategy</li>
+                      <li>Link building</li>
+                      <li>GEO optimization</li>
+                      <li>Up to 25 keywords</li>
+                      <li>Bi-weekly check-ins</li>
+                    </ul>
+                  </div>
+
+                  <!-- Premium Package -->
+                  <div class="package-card" onclick="selectPackage(this, 'premium', 2000)">
+                    <span class="package-badge">Best Value</span>
+                    <div class="package-name">Premium</div>
+                    <div class="package-price">$2,000</div>
+                    <div class="package-period">per month + HST</div>
+                    <ul class="package-features">
+                      <li>Everything in Growth</li>
+                      <li>Advanced GEO & AI search</li>
+                      <li>Competitor analysis</li>
+                      <li>Content creation</li>
+                      <li>Unlimited keywords</li>
+                      <li>Weekly strategy calls</li>
+                      <li>Priority support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Start Date -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Service Start Date</h3>
+                <p class="form-section-subtitle">When would you like to begin?</p>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Preferred Start Date <span class="required">*</span>
+                  </label>
+                  <input type="date" class="form-input" id="startDate" required min="2025-12-28">
+                  <div class="form-hint">Services typically begin within 5-7 business days</div>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Payment Method</h3>
+                <p class="form-section-subtitle">Choose how you'd like to pay each month</p>
+
+                <div class="payment-methods">
+                  <div class="payment-method selected" onclick="selectPayment(this, 'card')" data-payment="card">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-name">Credit Card</div>
+                    <div style="font-size: var(--fs-9); color: var(--cool-gray); margin-top: 5px;">Auto-billing</div>
+                  </div>
+                  <div class="payment-method" onclick="selectPayment(this, 'etransfer')" data-payment="etransfer">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-name">E-Transfer</div>
+                    <div style="font-size: var(--fs-9); color: var(--cool-gray); margin-top: 5px;">Monthly invoice</div>
+                  </div>
+                </div>
+
+                <!-- Credit Card Details -->
+                <div id="cardDetails" style="margin-top: 25px;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="card" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">Secure Auto-Billing via PayPal</div>
+                      <div class="alert-text">
+                        Your card will be charged automatically each month. You can cancel anytime with 30 days notice. First payment processed immediately.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Card Number <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label">
+                        Expiry Date <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">
+                        CVV <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardCVV" placeholder="123" maxlength="4">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Cardholder Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardName" placeholder="John Doe">
+                  </div>
+                </div>
+
+                <!-- E-Transfer Instructions -->
+                <div id="etransferDetails" style="margin-top: 25px; display: none;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">Monthly E-Transfer Payment</div>
+                      <div class="alert-text">
+                        You'll receive an invoice on the 1st of each month. Payment is due within 5 business days to maintain active service.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background: var(--ghost-white); padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <h4 style="color: var(--raisin-black-1); margin-bottom: 15px; font-size: var(--fs-6);">
+                      📧 E-Transfer Details:
+                    </h4>
+                    
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Send To:</strong>
+                      <a href="#" id="revealEmail" style="color: var(--majorelle-blue); font-size: var(--fs-5); font-weight: var(--fw-700); text-decoration: none;">Click to reveal email</a>
+                      <div id="copyHint" style="display: none; color: var(--cool-gray); font-size: var(--fs-8); margin-top: 5px;">✓ Email copied to clipboard!</div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">First Month Amount:</strong>
+                      <span style="color: var(--raisin-black-1); font-size: var(--fs-5); font-weight: var(--fw-700);" id="etransferAmount">Select a package</span>
+                      <span style="color: var(--cool-gray); font-size: var(--fs-8); margin-left: 10px;">(includes HST)</span>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Message/Memo (Required):</strong>
+                      <div style="background: var(--white); padding: 15px; border-radius: 10px; border: 2px dashed var(--majorelle-blue); margin-top: 10px;">
+                        <p style="color: var(--cool-gray); font-size: var(--fs-7); margin: 0; line-height: 1.6;">
+                          Include in your E-Transfer message:
+                        </p>
+                        <ul style="margin: 10px 0 0 20px; color: var(--raisin-black-1); font-size: var(--fs-7);">
+                          <li>Company Name</li>
+                          <li>Service: SEO/GEO - [Package Name]</li>
+                          <li>Month: [Month/Year]</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms & Conditions -->
+              <div class="form-section" style="margin-top: 30px;">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="terms" class="checkbox-input" required>
+                  <label for="terms" class="checkbox-label">
+                    I agree to the <a href="#" style="color: var(--majorelle-blue);">Terms & Conditions</a> and <a href="#" style="color: var(--majorelle-blue);">Monthly Subscription Agreement</a>. I understand this is a recurring monthly service that can be cancelled with 30 days notice.
+                  </label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="marketing" class="checkbox-input">
+                  <label for="marketing" class="checkbox-label">
+                    I'd like to receive SEO tips, industry updates, and performance insights from Plansale
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Section -->
+              <div class="submit-section">
+                <button type="submit" class="btn-submit" id="submitBtn">
+                  Subscribe & Start SEO Services
+                </button>
+                <div class="secure-notice">
+                  <ion-icon name="lock-closed"></ion-icon>
+                  <span id="secureText">Secure SSL encrypted payment via PayPal</span>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <ion-icon name="shield-checkmark"></ion-icon>
+                <span>Secure Checkout</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="calendar"></ion-icon>
+                <span>Cancel Anytime</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="trending-up"></ion-icon>
+                <span>Guaranteed Results</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Sidebar -->
+          <aside class="order-summary">
+            <h3 class="summary-title">Subscription Summary</h3>
+
+            <div class="summary-item">
+              <span class="summary-label">Service</span>
+              <span class="summary-value">SEO/GEO Monthly</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Package</span>
+              <span class="summary-value" id="summaryPackage">Not selected</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Monthly Fee</span>
+              <span class="summary-value" id="summaryMonthly">$0.00</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Tax (HST 13%)</span>
+              <span class="summary-value" id="summaryTax">$0.00</span>
+            </div>
+
+            <div class="summary-total">
+              <div class="summary-item">
+                <span class="summary-label">Monthly Total</span>
+                <span class="summary-value" id="summaryTotal">$0.00</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 15px; padding: 15px; background: rgba(102, 126, 234, 0.05); border-radius: 10px;">
+              <p style="color: var(--cool-gray); font-size: var(--fs-8); margin: 0; line-height: 1.6;">
+                💡 <strong>Billed monthly.</strong> First payment charged today. Cancel anytime with 30 days notice.
+              </p>
+            </div>
+
+            <h4 style="margin-top: 30px; margin-bottom: 15px; color: var(--raisin-black-1); font-size: var(--fs-6);">
+              All Packages Include:
+            </h4>
+            <ul class="features-list">
+              <li>Technical SEO audit & optimization</li>
+              <li>Keyword research & strategy</li>
+              <li>On-page & off-page optimization</li>
+              <li>Google Business Profile setup</li>
+              <li>Monthly performance reports</li>
+              <li>Algorithm update monitoring</li>
+              <li>Dedicated account manager</li>
+            </ul>
+
+            <div class="alert-box alert-info" style="margin-top: 25px;">
+              <ion-icon name="rocket" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Results Within 3-6 Months</div>
+                <div class="alert-text">
+                  Most clients see 50-200% increase in organic traffic within the first 6 months.
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- Booking Page JS -->
+  <script src="../assets/js/payment.js"></script>
+
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

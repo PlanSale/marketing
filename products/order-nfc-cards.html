@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order NFC Smart NFC Cards - Modern Networking Solution | Plansale</title>
+  <meta name="description" content="Order your NFC Smart NFC Cards. Transform customer interactions with tap-to-review technology. Increase 5-star reviews by up to 300%.">
+  <meta name="keywords" content="NFC cards, smart business cards, tap to review, Google review cards, NFC stand, digital business card">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Booking Page Specific Styles */
+    .booking-hero {
+      background: linear-gradient(180deg, #764ba2, #667eea 100%);
+      padding: 100px 0 60px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .booking-hero .h1 {
+      color: var(--white);
+      margin-bottom: 15px;
+      font-size: var(--fs-2);
+    }
+
+    .booking-hero .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: var(--fs-5);
+      margin-bottom: 10px;
+    }
+
+    .booking-hero .price-tag {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .booking-layout {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 992px) {
+      .booking-layout {
+        grid-template-columns: 1fr 400px;
+      }
+    }
+
+    /* Main Form Section */
+    .booking-form-section {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: var(--shadow-2);
+    }
+
+    .form-section-title {
+      font-size: var(--fs-4);
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--ghost-white);
+    }
+
+    .form-section-subtitle {
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-500);
+      margin-bottom: 10px;
+      font-size: var(--fs-6);
+    }
+
+    .form-label .required {
+      color: #ef4444;
+      margin-left: 3px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      font-size: var(--fs-6);
+      font-family: inherit;
+      transition: var(--transition-1);
+      background: var(--white);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--majorelle-blue);
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-hint {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+      margin-top: 6px;
+    }
+
+    /* Product Selection */
+    .product-grid {
+      display: grid;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-option {
+      border: 3px solid var(--ghost-white);
+      border-radius: 10px;
+      padding: 0;
+      cursor: pointer;
+      transition: var(--transition-1);
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .product-option:hover {
+      border-color: var(--majorelle-blue);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-3);
+    }
+
+    .product-option.selected {
+      border-color: var(--majorelle-blue);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+
+    .product-option.selected::before {
+      content: "✓";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 35px;
+      height: 35px;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--fw-700);
+      font-size: var(--fs-5);
+      z-index: 10;
+    }
+
+    .product-image-container {
+      width: 100%;
+      height: 200px;
+      background: var(--ghost-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-badge {
+      display: inline-block;
+      background: var(--sunglow);
+      color: var(--raisin-black-1);
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: var(--fs-9);
+      font-weight: var(--fw-700);
+      margin-bottom: 10px;
+    }
+
+    .product-name {
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: var(--fs-3);
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      font-size: var(--fs-8);
+      color: var(--cool-gray);
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .product-features {
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-features li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+      color: var(--cool-gray);
+      font-size: var(--fs-9);
+      line-height: 1.4;
+    }
+
+    .product-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+      font-size: var(--fs-8);
+    }
+
+    /* Quantity Selector */
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .quantity-label {
+      font-weight: var(--fw-500);
+      color: var(--raisin-black-1);
+    }
+
+    .quantity-input-wrapper {
+      display: flex;
+      align-items: center;
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .quantity-btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: var(--ghost-white);
+      color: var(--raisin-black-1);
+      font-size: var(--fs-4);
+      font-weight: var(--fw-700);
+      cursor: pointer;
+      transition: var(--transition-1);
+    }
+
+    .quantity-btn:hover {
+      background: var(--majorelle-blue);
+      color: var(--white);
+    }
+
+    .quantity-input {
+      width: 60px;
+      height: 40px;
+      border: none;
+      text-align: center;
+      font-size: var(--fs-6);
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+    }
+
+    /* Order Summary Sidebar */
+    .order-summary {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: var(--shadow-2);
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+
+    .summary-title {
+      font-size: var(--fs-4);
+      color: var(--raisin-black-1);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--ghost-white);
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--ghost-white);
+    }
+
+    .summary-item:last-child {
+      border-bottom: none;
+    }
+
+    .summary-label {
+      color: var(--cool-gray);
+      font-size: var(--fs-6);
+    }
+
+    .summary-value {
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-700);
+      font-size: var(--fs-6);
+    }
+
+    .summary-total {
+      background: var(--ghost-white);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .summary-total .summary-label {
+      font-size: var(--fs-5);
+      color: var(--raisin-black-1);
+      font-weight: var(--fw-700);
+    }
+
+    .summary-total .summary-value {
+      font-size: var(--fs-3);
+      color: var(--majorelle-blue);
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features-list li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+    }
+
+    .features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+    }
+
+    /* Payment Section */
+    .payment-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .payment-method {
+      border: 2px solid var(--ghost-white);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-1);
+    }
+
+    .payment-method:hover {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.05);
+    }
+
+    .payment-method.selected {
+      border-color: var(--majorelle-blue);
+      background: rgba(102, 126, 234, 0.1);
+    }
+
+    .payment-icon {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .payment-name {
+      font-weight: var(--fw-500);
+      color: var(--raisin-black-1);
+      font-size: var(--fs-7);
+    }
+
+    /* Checkbox Styles */
+    .checkbox-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .checkbox-label {
+      flex: 1;
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    /* Submit Button */
+    .submit-section {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px solid var(--ghost-white);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 18px 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: var(--fs-5);
+      font-weight: var(--fw-700);
+      cursor: pointer;
+      transition: var(--transition-1);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .secure-notice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--ghost-white);
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    .trust-badge ion-icon {
+      color: var(--majorelle-blue);
+      font-size: 20px;
+    }
+
+    /* Alert Box */
+    .alert-box {
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .alert-info {
+      background: rgba(102, 126, 234, 0.1);
+      border-left: 4px solid var(--majorelle-blue);
+    }
+
+    .alert-icon {
+      font-size: 24px;
+      color: var(--majorelle-blue);
+      flex-shrink: 0;
+    }
+
+    .alert-content {
+      flex: 1;
+    }
+
+    .alert-title {
+      font-weight: var(--fw-700);
+      color: var(--raisin-black-1);
+      margin-bottom: 5px;
+      font-size: var(--fs-7);
+    }
+
+    .alert-text {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="../index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="booking-hero">
+        <div class="container">
+          <p class="subtitle">📱 NFC Smart Cards</p>
+          <h1 class="h1">Modern Networking Made Effortless</h1>
+          <div class="price-tag">
+            Starting at CAD $10 per Card
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING FORM SECTION -->
+      <div class="booking-container">
+        <div class="booking-layout">
+
+          <!-- Main Form -->
+          <div class="booking-form-section">
+            
+            <!-- Alert Info -->
+            <div class="alert-box alert-info">
+              <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Setup Included</div>
+                <div class="alert-text">
+                  All cards come pre-configured with your business information. Simply tap to share reviews, contact info, and social media links. No app required!
+                </div>
+              </div>
+            </div>
+
+            <form id="orderForm">
+              
+              <!-- Business Information -->
+              <div class="form-section">
+                <h3 class="form-section-title">Business Information</h3>
+                <p class="form-section-subtitle">We'll use this to configure your NFC cards</p>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Business Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="businessName" placeholder="Your Business Name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Contact Person <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="contactName" placeholder="John Doe" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      Email Address <span class="required">*</span>
+                    </label>
+                    <input type="email" class="form-input" id="email" placeholder="business@example.com" required>
+                    <div class="form-hint">Order confirmation will be sent here</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Phone Number <span class="required">*</span>
+                    </label>
+                    <input type="tel" class="form-input" id="phone" placeholder="+1 (647) 123-4567" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Website URL
+                  </label>
+                  <input type="url" class="form-input" id="website" placeholder="https://www.yourbusiness.com">
+                  <div class="form-hint">Optional: Will be linked to your NFC card</div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Google Business Profile URL
+                  </label>
+                  <input type="url" class="form-input" id="googleProfile" placeholder="https://g.page/yourbusiness">
+                  <div class="form-hint">For tap-to-review functionality (we can help you find this)</div>
+                </div>
+              </div>
+
+              <!-- Product Selection -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Select Your Product</h3>
+                <p class="form-section-subtitle">Choose the NFC card option that fits your needs</p>
+
+                <input type="hidden" id="selectedProduct" required>
+                
+                <div class="product-grid">
+                  
+                  <!-- NFC Card -->
+                  <div class="product-option" onclick="selectProduct(this, 'NFC-card', 'NFC Card', 10)">
+                    <div class="product-image-container">
+                      <img src="../assets/images/NFC-card.webp" alt="NFC Card" class="product-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:var(--cool-gray)\'>📱<br>NFC Card</div>';">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-name">NFC Card</div>
+                      <div class="product-price">$10</div>
+                      <div class="product-description">
+                        Basic NFC card perfect for counters and desks
+                      </div>
+                      <ul class="product-features">
+                        <li>NFC-enabled card</li>
+                        <li>Tap-to-review</li>
+                        <li>Contact saving</li>
+                        <li>Custom branding</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- NFC Stand -->
+                  <div class="product-option" onclick="selectProduct(this, 'NFC-stand', 'NFC Stand', 20)">
+                    <span class="product-badge">Popular</span>
+                    <div class="product-image-container">
+                      <img src="../assets/images/NFC-stand.webp" alt="NFC Stand" class="product-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:var(--cool-gray)\'>🏆<br>NFC Stand</div>';">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-name">NFC Stand</div>
+                      <div class="product-price">$20</div>
+                      <div class="product-description">
+                        Premium stand card with eye-catching display
+                      </div>
+                      <ul class="product-features">
+                        <li>Includes display stand</li>
+                        <li>Premium materials</li>
+                        <li>Water-resistant</li>
+                        <li>All NFC Card features</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Custom NFC -->
+                  <div class="product-option" onclick="selectProduct(this, 'custom-NFC', 'Custom NFC', 30)">
+                    <div class="product-image-container">
+                      <img src="../assets/images/NFC-custom.webp" alt="Custom NFC" class="product-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'padding:40px;text-align:center;color:var(--cool-gray)\'>⭐<br>Custom NFC</div>';">
+                    </div>
+                    <div class="product-info">
+                      <div class="product-name">Custom NFC</div>
+                      <div class="product-price">$30</div>
+                      <div class="product-description">
+                        Fully customized design with your logo and colors
+                      </div>
+                      <ul class="product-features">
+                        <li>Custom design</li>
+                        <li>Your logo & colors</li>
+                        <li>Premium finish</li>
+                        <li>Stand included</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Quantity Selection -->
+                <div class="quantity-control">
+                  <span class="quantity-label">Quantity:</span>
+                  <div class="quantity-input-wrapper">
+                    <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="quantity" class="quantity-input" value="1" min="1" max="100" readonly>
+                    <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                  </div>
+                  <span style="color: var(--cool-gray); font-size: var(--fs-8);">
+                    (Bulk discounts available for 10+ cards)
+                  </span>
+                </div>
+              </div>
+
+              <!-- Shipping Information -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Shipping Address</h3>
+                <p class="form-section-subtitle">Where should we send your cards?</p>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Street Address <span class="required">*</span>
+                  </label>
+                  <input type="text" class="form-input" id="address" placeholder="123 Main Street" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">
+                      City <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="city" placeholder="Toronto" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Province <span class="required">*</span>
+                    </label>
+                    <select class="form-select" id="province" required>
+                      <option value="">Select Province</option>
+                      <option value="ON">Ontario</option>
+                      <option value="QC">Quebec</option>
+                      <option value="BC">British Columbia</option>
+                      <option value="AB">Alberta</option>
+                      <option value="MB">Manitoba</option>
+                      <option value="SK">Saskatchewan</option>
+                      <option value="NS">Nova Scotia</option>
+                      <option value="NB">New Brunswick</option>
+                      <option value="NL">Newfoundland and Labrador</option>
+                      <option value="PE">Prince Edward Island</option>
+                      <option value="NT">Northwest Territories</option>
+                      <option value="YT">Yukon</option>
+                      <option value="NU">Nunavut</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">
+                    Postal Code <span class="required">*</span>
+                  </label>
+                  <input type="text" class="form-input" id="postalCode" placeholder="M5H 2N2" required>
+                </div>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="form-section" style="margin-top: 40px;">
+                <h3 class="form-section-title">Payment Method</h3>
+                <p class="form-section-subtitle">Choose how you'd like to pay</p>
+
+                <div class="payment-methods">
+                  <div class="payment-method selected" onclick="selectPayment(this, 'card')" data-payment="card">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-name">Credit Card</div>
+                  </div>
+                  <div class="payment-method" onclick="selectPayment(this, 'etransfer')" data-payment="etransfer">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-name">E-Transfer</div>
+                  </div>
+                </div>
+
+                <!-- Credit Card Details -->
+                <div id="cardDetails" style="margin-top: 25px;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="card" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">Secure Payment via PayPal</div>
+                      <div class="alert-text">
+                        Your payment is processed securely through PayPal. Cards ship within 3-5 business days.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Card Number <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label">
+                        Expiry Date <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label">
+                        CVV <span class="required">*</span>
+                      </label>
+                      <input type="text" class="form-input" id="cardCVV" placeholder="123" maxlength="4">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Cardholder Name <span class="required">*</span>
+                    </label>
+                    <input type="text" class="form-input" id="cardName" placeholder="John Doe">
+                  </div>
+                </div>
+
+                <!-- E-Transfer Instructions -->
+                <div id="etransferDetails" style="margin-top: 25px; display: none;">
+                  <div class="alert-box alert-info">
+                    <ion-icon name="information-circle" class="alert-icon"></ion-icon>
+                    <div class="alert-content">
+                      <div class="alert-title">E-Transfer Payment</div>
+                      <div class="alert-text">
+                        After submitting your order, send E-Transfer payment. Your cards will ship within 3-5 business days of payment confirmation.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background: var(--ghost-white); padding: 25px; border-radius: 10px; margin-top: 20px;">
+                    <h4 style="color: var(--raisin-black-1); margin-bottom: 15px; font-size: var(--fs-6);">
+                      📧 E-Transfer Details:
+                    </h4>
+                    
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Send To:</strong>
+                      <a href="#" id="revealEmail" style="color: var(--majorelle-blue); font-size: var(--fs-5); font-weight: var(--fw-700); text-decoration: none;">Click to reveal email</a>
+                      <div id="copyHint" style="display: none; color: var(--cool-gray); font-size: var(--fs-8); margin-top: 5px;">✓ Email copied to clipboard!</div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Amount:</strong>
+                      <span style="color: var(--raisin-black-1); font-size: var(--fs-5); font-weight: var(--fw-700);" id="etransferAmount">Select a product</span>
+                      <span style="color: var(--cool-gray); font-size: var(--fs-8); margin-left: 10px;">(includes HST + shipping)</span>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                      <strong style="color: var(--raisin-black-1); display: block; margin-bottom: 5px;">Message/Memo:</strong>
+                      <div style="background: var(--white); padding: 15px; border-radius: 10px; border: 2px dashed var(--majorelle-blue); margin-top: 10px;">
+                        <p style="color: var(--cool-gray); font-size: var(--fs-7); margin: 0; line-height: 1.6;">
+                          Include: Business Name, Product Type, Quantity
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terms & Conditions -->
+              <div class="form-section" style="margin-top: 30px;">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="terms" class="checkbox-input" required>
+                  <label for="terms" class="checkbox-label">
+                    I agree to the <a href="#" style="color: var(--majorelle-blue);">Terms & Conditions</a> and understand that cards are custom-configured and non-refundable once shipped.
+                  </label>
+                </div>
+
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="marketing" class="checkbox-input">
+                  <label for="marketing" class="checkbox-label">
+                    Send me tips on maximizing my NFC card's effectiveness
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Section -->
+              <div class="submit-section">
+                <button type="submit" class="btn-submit" id="submitBtn">
+                  Complete Order
+                </button>
+                <div class="secure-notice">
+                  <ion-icon name="lock-closed"></ion-icon>
+                  <span id="secureText">Secure payment via PayPal</span>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <ion-icon name="shield-checkmark"></ion-icon>
+                <span>Secure Checkout</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="rocket"></ion-icon>
+                <span>Fast Shipping</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="settings"></ion-icon>
+                <span>Setup Included</span>
+              </div>
+              <div class="trust-badge">
+                <ion-icon name="phone-portrait"></ion-icon>
+                <span>Works on All Phones</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Sidebar -->
+          <aside class="order-summary">
+            <h3 class="summary-title">Order Summary</h3>
+
+            <div class="summary-item">
+              <span class="summary-label">Product</span>
+              <span class="summary-value" id="summaryProduct">Not selected</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Quantity</span>
+              <span class="summary-value" id="summaryQuantity">1</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Unit Price</span>
+              <span class="summary-value" id="summaryUnitPrice">$0.00</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Subtotal</span>
+              <span class="summary-value" id="summarySubtotal">$0.00</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Shipping</span>
+              <span class="summary-value" id="summaryShipping">$10.00</span>
+            </div>
+
+            <div class="summary-item">
+              <span class="summary-label">Tax (HST 13%)</span>
+              <span class="summary-value" id="summaryTax">$0.00</span>
+            </div>
+
+            <div class="summary-total">
+              <div class="summary-item">
+                <span class="summary-label">Total</span>
+                <span class="summary-value" id="summaryTotal">$0.00</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 15px; padding: 15px; background: rgba(102, 126, 234, 0.05); border-radius: 10px;">
+              <p style="color: var(--cool-gray); font-size: var(--fs-8); margin: 0; line-height: 1.6;">
+                📦 <strong>Free shipping</strong> on orders of 5+ cards
+              </p>
+            </div>
+
+            <h4 style="margin-top: 30px; margin-bottom: 15px; color: var(--raisin-black-1); font-size: var(--fs-6);">
+              What's Included:
+            </h4>
+            <ul class="features-list">
+              <li>Pre-configured NFC technology</li>
+              <li>Google Business Profile link</li>
+              <li>Custom branding setup</li>
+              <li>Tap-to-review functionality</li>
+              <li>Contact saving capability</li>
+              <li>Water-resistant design</li>
+              <li>Setup guide & support</li>
+            </ul>
+
+            <div class="alert-box alert-info" style="margin-top: 25px;">
+              <ion-icon name="star" class="alert-icon"></ion-icon>
+              <div class="alert-content">
+                <div class="alert-title">Increase Reviews by 300%</div>
+                <div class="alert-text">
+                  Customers using NFC cards see an average 300% increase in 5-star reviews.
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- Order Page JS -->
+  <script src="../assets/js/order-nfc.js"></script>
+
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

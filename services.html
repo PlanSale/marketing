@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Web Development, SEO & Digital Marketing | Plansale Toronto</title>
+  <meta name="description" content="Comprehensive digital services including web development, SEO, GEO (Generative Engine Optimization), digital marketing, and creative design. Serving Toronto and Canada.">
+  <meta name="keywords" content="web development services, SEO Toronto, digital marketing, GEO services, generative engine optimization, creative design, search engine marketing, business development">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Services Page Specific Styles */
+    .services-hero {
+      background: linear-gradient(135deg,#FFA500, #fcbe32 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .services-hero .h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .services-hero .hero-text {
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: var(--fs-6);
+      line-height: 1.6;
+    }
+
+    .service-detail-section {
+      padding: var(--section-padding) 0;
+    }
+
+    .service-detail-section:nth-child(even) {
+      background-color: var(--ghost-white);
+    }
+
+    .service-detail-card {
+      display: grid;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: 768px) {
+      .service-detail-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .service-detail-card:nth-child(even) .service-detail-content {
+        order: 2;
+      }
+
+      .service-detail-card:nth-child(even) .service-detail-image {
+        order: 1;
+      }
+    }
+
+    .service-detail-image {
+      border-radius: var(--radius-20);
+      overflow: hidden;
+      box-shadow: var(--shadow-4);
+    }
+
+    .service-detail-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .service-detail-content .service-number {
+      color: var(--majorelle-blue);
+      font-size: var(--fs-8);
+      font-weight: var(--fw-700);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .service-detail-content .h2 {
+      margin-bottom: 20px;
+      color: var(--raisin-black-1);
+    }
+
+    .service-detail-content .service-description {
+      color: var(--cool-gray);
+      margin-bottom: 25px;
+      line-height: 1.8;
+      font-size: var(--fs-7);
+    }
+
+    .service-features {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      color: var(--slate-gray);
+    }
+
+    .service-features ion-icon {
+      color: var(--majorelle-blue);
+      font-size: 24px;
+      margin-right: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .service-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      padding: 25px;
+      background: var(--ghost-white);
+      border-radius: var(--radius-15);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: var(--fs-2);
+      font-weight: var(--fw-700);
+      color: var(--majorelle-blue);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: var(--fs-9);
+      color: var(--cool-gray);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, hsl(241, 77%, 63%) 0%, hsl(267, 76%, 57%) 100%);
+      padding: 80px 0;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .cta-section .h2 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-section .cta-text {
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: var(--fs-6);
+    }
+
+    .pricing-preview {
+      background: var(--ghost-white);
+      padding: 30px;
+      border-radius: var(--radius-15);
+      margin-top: 30px;
+    }
+
+    .pricing-preview .h3 {
+      margin-bottom: 15px;
+      color: var(--raisin-black-1);
+    }
+
+    .pricing-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--gainsboro);
+    }
+
+    .pricing-item:last-child {
+      border-bottom: none;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 25px;
+      background: var(--white);
+      border-radius: var(--radius-15);
+      box-shadow: var(--shadow-3);
+      transition: var(--transition-2);
+    }
+
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-4);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: var(--majorelle-blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--fs-3);
+      font-weight: var(--fw-700);
+      margin: 0 auto 20px;
+    }
+
+    .process-step .h4 {
+      margin-bottom: 10px;
+      color: var(--raisin-black-1);
+    }
+
+    .process-step .step-text {
+      color: var(--cool-gray);
+      font-size: var(--fs-8);
+    }
+
+    .geo-highlight {
+      background: linear-gradient(135deg, hsl(52, 98%, 95%) 0%, hsl(210, 100%, 95%) 100%);
+      padding: 40px;
+      border-radius: var(--radius-20);
+      border-left: 5px solid var(--majorelle-blue);
+      margin: 30px 0;
+    }
+
+    .geo-highlight .badge {
+      background: var(--majorelle-blue);
+      color: var(--white);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: var(--fs-9);
+      font-weight: var(--fw-700);
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link active" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="services-hero">
+        <div class="container">
+          <h1 class="h1">Our Comprehensive Digital Services</h1>
+          <p class="hero-text">
+            From cutting-edge web development to AI-powered GEO strategies, we deliver complete digital solutions 
+            that drive real business growth across Canada.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICE 1: DESIGN & CREATIVES -->
+      <section class="service-detail-section" id="Design & Creatives">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-5.png" alt="Design and Creative Services" style="padding: 60px; background: linear-gradient(135deg, hsl(210, 100%, 98%) 0%, hsl(210, 100%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">01</span>
+              <h2 class="h2">Design & Creatives</h2>
+              <p class="service-description">
+                Transform your brand with stunning visual design that captivates your audience. Our creative team 
+                brings your vision to life with strategic design thinking and artistic excellence.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Brand Identity Design:</strong> Logos, color schemes, typography, and complete brand guidelines</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>UI/UX Design:</strong> User-centered interface design with focus on conversion optimization</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Marketing Materials:</strong> Brochures, business cards, social media graphics, and presentations</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Motion Graphics:</strong> Animated logos, explainer videos, and social media content</span>
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary has-before has-after">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 2: WEB & MOBILE DEVELOPMENT -->
+      <section class="service-detail-section" id="WEB & MOBILE DEVELOPMENT">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-2.png" alt="Web and Mobile Development" style="padding: 60px; background: linear-gradient(135deg, hsl(267, 76%, 98%) 0%, hsl(267, 76%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">02</span>
+              <h2 class="h2">Web & Mobile Development</h2>
+              <p class="service-description">
+                Build powerful, scalable web and mobile applications tailored to your business needs. From restaurant 
+                ordering systems to medical appointment booking, we create solutions that work.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Custom Web Applications:</strong> React, Vue.js, Angular with modern architecture</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>E-commerce Platforms:</strong> Shopify, WooCommerce, custom solutions with payment integration</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Mobile Apps:</strong> iOS and Android native or cross-platform development</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Industry-Specific Solutions:</strong> Restaurant POS, clinic booking, real estate platforms</span>
+                </li>
+              </ul>
+              
+              <div class="service-stats">
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">98%</span>
+                  <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">24/7</span>
+                  <span class="stat-label">Support Available</span>
+                </div>
+              </div>
+
+              <a href="projects.html" class="btn btn-primary has-before has-after">View Projects</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <!-- SERVICE 4: SEO & GEO -->
+      <section class="service-detail-section" id="SEO & GEO">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-7.png" alt="SEO and GEO Services" style="padding: 60px; background: linear-gradient(135deg, hsl(174, 77%, 98%) 0%, hsl(174, 77%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">03</span>
+              <h2 class="h2">Search/Generative Engine Optimization (SEO/GEO)</h2>
+              <p class="service-description">
+                Dominate search results with comprehensive SEO strategies. We combine technical excellence, 
+                content optimization, and authority building to achieve sustainable organic growth.
+              </p>
+              
+              <div class="geo-highlight">
+                <span class="badge">NEW: AI-POWERED</span>
+                <h3 class="h3" style="margin-bottom: 15px;">Generative Engine Optimization (GEO)</h3>
+                <p style="color: var(--cool-gray); line-height: 1.8;">
+                  Stay ahead with GEO - the next evolution of SEO. Optimize your content for AI-powered search engines 
+                  like ChatGPT, Google SGE, and Bing Chat. Be visible where the future of search is happening.
+                </p>
+              </div>
+
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Technical SEO Audit:</strong> Site speed, mobile optimization, schema markup, Core Web Vitals</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>On-Page Optimization:</strong> Keyword research, content optimization, internal linking</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Local SEO:</strong> Google Business Profile optimization for Toronto and Canada</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Link Building:</strong> High-quality backlinks from authoritative Canadian sources</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>GEO Strategy:</strong> AI prompt optimization, featured snippet targeting, conversational content</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Content Marketing:</strong> SEO-optimized blog posts, guides, and resources</span>
+                </li>
+              </ul>
+
+              <h3 class="h3" style="margin-top: 30px; margin-bottom: 20px;">Our SEO Process</h3>
+              <div class="process-steps">
+                <div class="process-step">
+                  <div class="step-number">1</div>
+                  <h4 class="h4">Audit</h4>
+                  <p class="step-text">Comprehensive site analysis and competitor research</p>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">2</div>
+                  <h4 class="h4">Strategy</h4>
+                  <p class="step-text">Custom roadmap aligned with business goals</p>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">3</div>
+                  <h4 class="h4">Execute</h4>
+                  <p class="step-text">Implementation of technical and content optimizations</p>
+                </div>
+                <div class="process-step">
+                  <div class="step-number">4</div>
+                  <h4 class="h4">Monitor</h4>
+                  <p class="step-text">Track rankings, traffic, and continuous improvement</p>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary has-before has-after">Get SEO Audit</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 3: SEARCH ENGINE MARKETING -->
+      <section class="service-detail-section" id="SEARCH ENGINE MARKETING">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-6.png" alt="Search Engine Marketing" style="padding: 60px; background: linear-gradient(135deg, hsl(52, 98%, 98%) 0%, hsl(52, 98%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">04</span>
+              <h2 class="h2">Search Engine Marketing (SEM)</h2>
+              <p class="service-description">
+                Drive immediate traffic and conversions with strategic paid advertising campaigns. Our data-driven 
+                approach maximizes your ROI across Google Ads, Bing, and social media platforms.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Google Ads Management:</strong> Search, Display, Shopping, and YouTube campaigns</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Social Media Advertising:</strong> Facebook, Instagram, LinkedIn, TikTok ads</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Remarketing Campaigns:</strong> Re-engage visitors and boost conversions</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Landing Page Optimization:</strong> A/B testing and conversion rate optimization</span>
+                </li>
+              </ul>
+
+              <div class="pricing-preview">
+                <h3 class="h3">Average Campaign Performance</h3>
+                <div class="pricing-item">
+                  <span>Click-Through Rate (CTR)</span>
+                  <strong style="color: var(--majorelle-blue);">4.2%</strong>
+                </div>
+                <div class="pricing-item">
+                  <span>Conversion Rate</span>
+                  <strong style="color: var(--majorelle-blue);">8.5%</strong>
+                </div>
+                <div class="pricing-item">
+                  <span>Average ROAS</span>
+                  <strong style="color: var(--majorelle-blue);">450%</strong>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary has-before has-after">Start Campaign</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- SERVICE 5: Funding in Bueiness -->
+      <section class="service-detail-section" id="Funding In Business">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-1.png" alt="Business Development Services" style="padding: 60px; background: linear-gradient(135deg, hsl(157, 89%, 98%) 0%, hsl(157, 89%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">05</span>
+              <h2 class="h2">Funding In Business</h2>
+              <p class="service-description">
+                Scale your business with strategic planning and expert guidance. From government grants to market 
+                expansion, we help you unlock new growth opportunities.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Canada Grant Applications:</strong> RAISE, CSBFP, BDC, provincial programs - up to $10,000</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Digital Transformation Consulting:</strong> Technology adoption and process optimization</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Market Analysis:</strong> Competitive research and opportunity identification</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Growth Strategy:</strong> Expansion planning and partnership development</span>
+                </li>
+              </ul>
+
+              <div class="service-stats">
+                <div class="stat-item">
+                  <span class="stat-number">$2M+</span>
+                  <span class="stat-label">Grants Secured</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Businesses Funded</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">90%</span>
+                  <span class="stat-label">Approval Rate</span>
+                </div>
+              </div>
+
+              <a href="funding.html" class="btn btn-primary has-before has-after">Explore Funding</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE 6: CUSTOMER SUPPORT -->
+      <section class="service-detail-section" id="CUSTOMER SUPPORT">
+        <div class="container">
+          <div class="service-detail-card">
+            <div class="service-detail-image">
+              <img src="./assets/images/service-icon-3.png" alt="Customer Support Services" style="padding: 60px; background: linear-gradient(135deg, hsl(17, 100%, 98%) 0%, hsl(17, 100%, 95%) 100%);">
+            </div>
+            <div class="service-detail-content">
+              <span class="service-number">06</span>
+              <h2 class="h2">24/7 Technical Support & Maintenance</h2>
+              <p class="service-description">
+                Never worry about downtime or technical issues. Our dedicated support team ensures your digital 
+                infrastructure runs smoothly around the clock.
+              </p>
+              <ul class="service-features">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>24/7 Monitoring:</strong> Proactive system monitoring and instant alerts</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Priority Response:</strong> Emergency support within 1 hour</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Regular Updates:</strong> Security patches, plugin updates, and optimization</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Backup & Recovery:</strong> Daily backups with disaster recovery planning</span>
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                  <span><strong>Performance Optimization:</strong> Continuous speed and efficiency improvements</span>
+                </li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary has-before has-after">Get Support Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section" id="contact">
+        <div class="container">
+          <h2 class="h2">Ready to Transform Your Digital Presence?</h2>
+          <p class="cta-text">
+            Let's discuss how our services can help you achieve your business goals. 
+            Get a free consultation and customized strategy roadmap.
+          </p>
+
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+            <a href="tel:+16479472456" class="btn" style="background: var(--white); color: var(--majorelle-blue); padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none;">
+              <ion-icon name="call-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+              Call (647) 947-2456
+            </a>
+            <a href="/cdn-cgi/l/email-protection#7b12151d143b0b171a15081a171e55181a" class="btn" style="background: transparent; color: var(--white); border: 2px solid var(--white); padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none;">
+              <ion-icon name="mail-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+              Email Us
+            </a>
+          </div>
+
+          <p style="margin-top: 40px; color: rgba(255,255,255,0.8); font-size: var(--fs-8);">
+            <ion-icon name="location-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+            9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- CUSTOM JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="./assets/js/script.js" defer></script
+
+  <!-- IONICON -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

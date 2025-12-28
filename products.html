@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products & Services - Digital Marketing, Funding, SEO, NFC Cards & VPN | Plansale</title>
+  <meta name="description" content="Explore Plansale's comprehensive business solutions including digital marketing consultation, funding assistance, SEO/GEO services, NFC smart cards, and secure VPN services for business travelers.">
+  <meta name="keywords" content="digital marketing consultation, business funding, SEO services, GEO services, NFC cards, VPN services, business solutions Toronto, smart business cards">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Products Page Specific Styles */
+    .products-hero {
+      background: linear-gradient(180deg, #764ba2 ,#667eea 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .products-hero .h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .products-hero .hero-text {
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: var(--fs-6);
+      line-height: 1.6;
+    }
+
+    .products-section {
+      padding: var(--section-padding) 0;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-2);
+      transition: var(--transition-2);
+      border: 2px solid transparent;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-4);
+      border-color: var(--majorelle-blue);
+    }
+
+    .product-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 2px solid var(--ghost-white);
+    }
+
+    .product-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      flex-shrink: 0;
+    }
+
+    .product-title-wrap {
+      flex: 1;
+    }
+
+    .product-card .h3 {
+      color: var(--raisin-black-1);
+      margin-bottom: 8px;
+      font-size: var(--fs-4);
+    }
+
+    .product-tagline {
+      color: var(--cool-gray);
+      font-size: var(--fs-7);
+      font-style: italic;
+    }
+
+    .product-pricing {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--white);
+      padding: 15px 25px;
+      border-radius: 10px;
+      display: inline-block;
+      font-weight: var(--fw-700);
+      font-size: var(--fs-5);
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .product-pricing .price {
+      font-size: var(--fs-3);
+      display: block;
+      margin-top: 5px;
+    }
+
+    .product-pricing .period {
+      font-size: var(--fs-7);
+      font-weight: var(--fw-400);
+      opacity: 0.9;
+    }
+
+    .product-description {
+      color: var(--cool-gray);
+      line-height: 1.8;
+      margin-bottom: 25px;
+      font-size: var(--fs-6);
+    }
+
+    .product-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .product-features li {
+      padding: 12px 0;
+      padding-left: 30px;
+      position: relative;
+      color: var(--raisin-black-2);
+      font-size: var(--fs-6);
+      border-bottom: 1px solid var(--ghost-white);
+    }
+
+    .product-features li:last-child {
+      border-bottom: none;
+    }
+
+    .product-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--majorelle-blue);
+      font-weight: var(--fw-700);
+      font-size: var(--fs-5);
+    }
+
+    .product-cta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-product {
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-weight: var(--fw-700);
+      font-size: var(--fs-7);
+      transition: var(--transition-1);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary-product {
+      background: var(--majorelle-blue);
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-primary-product:hover {
+      background: var(--ocean-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary-product {
+      background: transparent;
+      color: var(--majorelle-blue);
+      border: 2px solid var(--majorelle-blue);
+    }
+
+    .btn-secondary-product:hover {
+      background: var(--majorelle-blue);
+      color: var(--white);
+    }
+
+    .product-badge {
+      display: inline-block;
+      padding: 6px 15px;
+      background: var(--sunglow);
+      color: var(--raisin-black-1);
+      border-radius: 10px;
+      font-size: var(--fs-8);
+      font-weight: var(--fw-700);
+      margin-left: 15px;
+    }
+
+    /* Color variations for product icons */
+    .product-icon.blue {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+    }
+
+    .product-icon.green {
+      background: rgba(52, 211, 153, 0.1);
+      color: #34d399;
+    }
+
+    .product-icon.orange {
+      background: rgba(251, 146, 60, 0.1);
+      color: #fb923c;
+    }
+
+    .product-icon.purple {
+      background: rgba(168, 85, 247, 0.1);
+      color: #a855f7;
+    }
+
+    .product-icon.cyan {
+      background: rgba(6, 182, 212, 0.1);
+      color: #06b6d4;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        padding: 25px;
+      }
+
+      .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .product-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-product {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">Plansale</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="index.html" class="logo">Plansale</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link" data-nav-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="projects.html" class="navbar-link" data-nav-link>Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="funding.html" class="navbar-link" data-nav-link>Funding</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- HERO SECTION -->
+      <section class="products-hero">
+        <div class="container">
+          <h1 class="h1">Our Products & Solutions</h1>
+          <p class="hero-text">
+            Comprehensive business solutions designed to accelerate your growth. From strategic consultation to cutting-edge technology, we provide everything your business needs to thrive in the digital age.
+          </p>
+        </div>
+      </section>
+
+      <!-- PRODUCTS SECTION -->
+      <section class="products-section">
+        <div class="container">
+
+          <p class="section-subtitle has-before text-center">What We Offer</p>
+          <h2 class="h2 section-title text-center">
+            Professional Solutions for <span class="has-before">Modern Businesses</span>
+          </h2>
+
+          <!-- Product 1: Digital Marketing Consultation -->
+          <div class="product-card">
+            <div class="product-header">
+              <div class="product-icon blue">
+                💡
+              </div>
+              <div class="product-title-wrap">
+                <h3 class="h3">Digital Marketing Consultation</h3>
+                <p class="product-tagline">Strategic guidance for your online presence</p>
+              </div>
+            </div>
+
+            <div class="product-pricing">
+              Expert Consultation
+              <span class="price">CAD $100 <span class="period">/ 30 minutes</span></span>
+            </div>
+
+            <p class="product-description">
+              Get personalized digital marketing strategies tailored to your business needs. Our expert consultants will analyze your current marketing efforts, identify opportunities for growth, and provide actionable recommendations to boost your online presence and drive measurable results.
+            </p>
+
+            <ul class="product-features">
+              <li>Comprehensive digital marketing audit and analysis</li>
+              <li>Customized strategy development for your target market</li>
+              <li>Social media optimization and content strategy</li>
+              <li>ROI-focused campaign recommendations</li>
+              <li>Competitor analysis and market positioning insights</li>
+              <li>Follow-up action plan with clear implementation steps</li>
+            </ul>
+
+            <div class="product-cta">
+              <a href="products/booking-digital-marketing.html" class="btn-product btn-primary-product">Book Consultation</a>
+              <a href="blogs/bcd.html" class="btn-product btn-secondary-product">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Product 2: Business Funding & Loan Consultation -->
+          <div class="product-card">
+            <div class="product-header">
+              <div class="product-icon green">
+                💰
+              </div>
+              <div class="product-title-wrap">
+                <h3 class="h3">Business Funding & Loan Consultation</h3>
+                <p class="product-tagline">Navigate government grants and financing options</p>
+              </div>
+              <span class="product-badge">High Value</span>
+            </div>
+
+            <div class="product-pricing">
+              Premium Advisory
+              <span class="price">CAD $200 <span class="period">/ 30 minutes</span></span>
+            </div>
+
+            <p class="product-description">
+              Unlock access to government funding programs, grants, and business loans. Our experienced advisors will guide you through the complex application process, help you identify eligible programs, and maximize your chances of securing the capital your business needs to grow and succeed.
+            </p>
+
+            <ul class="product-features">
+              <li>Government grant and subsidy program identification</li>
+              <li>Eligibility assessment and application strategy</li>
+              <li>Business loan options and lender matching</li>
+              <li>Financial documentation preparation guidance</li>
+              <li>Application writing and submission support</li>
+              <li>Access to exclusive funding opportunities database</li>
+              <li>Post-application follow-up assistance</li>
+            </ul>
+
+            <div class="product-cta">
+              <a href="products/Booking-funding-consultation.html" class="btn-product btn-primary-product">Book Advisory Session</a>
+              <a href="blogs/csbfp.html" class="btn-product btn-secondary-product">View Success Stories</a>
+            </div>
+          </div>
+
+          <!-- Product 3: SEO/GEO Implementation Services -->
+          <div class="product-card">
+            <div class="product-header">
+              <div class="product-icon orange">
+                🚀
+              </div>
+              <div class="product-title-wrap">
+                <h3 class="h3">SEO/GEO Implementation Services</h3>
+                <p class="product-tagline">Dominate search engines and AI-powered results</p>
+              </div>
+            </div>
+
+            <div class="product-pricing">
+              Monthly Service
+              <span class="price">Starting at CAD $500 <span class="period">/ month</span></span>
+            </div>
+
+            <p class="product-description">
+              Boost your online visibility with our comprehensive SEO (Search Engine Optimization) and GEO (Generative Engine Optimization) services. We combine traditional SEO best practices with cutting-edge AI optimization techniques to ensure your business appears in both traditional search results and AI-generated responses.
+            </p>
+
+            <ul class="product-features">
+              <li>Complete technical SEO audit and optimization</li>
+              <li>Keyword research and content strategy development</li>
+              <li>On-page and off-page optimization</li>
+              <li>GEO implementation for AI search engines (ChatGPT, Perplexity, etc.)</li>
+              <li>Local SEO and Google Business Profile optimization</li>
+              <li>Monthly performance reports and analytics</li>
+              <li>Continuous algorithm updates and strategy adjustments</li>
+              <li>Link building and authority development</li>
+            </ul>
+
+            <div class="product-cta">
+              <a href="products/booking-seo-services.html" class="btn-product btn-primary-product">Get Started Today</a>
+              <a href="blogs/raise.html" class="btn-product btn-secondary-product">View Packages</a>
+            </div>
+          </div>
+
+          <!-- Product 4: NFC Smart NFC Cards -->
+          <div class="product-card">
+            <div class="product-header">
+              <div class="product-icon purple">
+                📱
+              </div>
+              <div class="product-title-wrap">
+                <h3 class="h3">NFC Smart Cards</h3>
+                <p class="product-tagline">Modern networking made effortless</p>
+              </div>
+              <span class="product-badge">Popular</span>
+            </div>
+
+            <p class="product-description">
+              Transform how customers interact with your business using our premium NFC smart cards. Each card comes pre-configured with your Google Business Profile, review links, and contact information. Customers simply tap the card with their smartphone to instantly leave reviews, save your contact, or visit your website - no app required!
+            </p>
+
+            <!-- NFC Product Versions Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 30px 0;">
+              
+              <!-- NFC Card Basic -->
+              <div style="background: var(--ghost-white); border-radius: 15px; padding: 25px; text-align: center; border: 2px solid transparent; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--majorelle-blue)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'">
+                <div style="background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                  <img src="./assets/images/NFC-card.webp" alt="NFC Basic Card" style="width: 100%; max-width: 200px; height: auto; object-fit: contain;">
+                </div>
+                <h4 style="color: var(--raisin-black-1); margin-bottom: 10px; font-size: var(--fs-6);">NFC Card</h4>
+                <div style="font-size: var(--fs-3); font-weight: var(--fw-700); color: var(--majorelle-blue); margin-bottom: 15px;">
+                  CAD $10
+                  <span style="font-size: var(--fs-8); font-weight: normal; color: var(--cool-gray);">/ card</span>
+                </div>
+                <p style="color: var(--cool-gray); font-size: var(--fs-8); margin-bottom: 15px; line-height: 1.6;">
+                  Basic NFC-enabled card with pre-configured review links and contact information
+                </p>
+                <ul style="text-align: left; color: var(--slate-gray); font-size: var(--fs-9); list-style: none; padding: 0; margin-bottom: 20px;">
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Standard NFC card
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Pre-configured links
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Business branding
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Setup included
+                  </li>
+                </ul>
+                <a href="products/order-nfc-cards.html" style="display: inline-block; background: var(--majorelle-blue); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(98, 84, 243, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  Order Now
+                </a>
+              </div>
+
+              <!-- NFC Stand -->
+              <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 25px; text-align: center; transform: scale(1.05); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ff6b6b; color: white; padding: 5px 20px; border-radius: 20px; font-size: var(--fs-9); font-weight: 700; box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);">
+                  RECOMMENDED
+                </div>
+                <div style="background: white; border-radius: 10px; padding: 20px; margin: 25px 0 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                  <img src="./assets/images/NFC-stand.webp" alt="NFC Stand Card" style="width: 100%; max-width: 200px; height: auto; object-fit: contain;">
+                </div>
+                <h4 style="color: white; margin-bottom: 10px; font-size: var(--fs-6); font-weight: 700;">NFC Stand</h4>
+                <div style="font-size: var(--fs-2); font-weight: var(--fw-700); color: white; margin-bottom: 15px;">
+                  CAD $20
+                  <span style="font-size: var(--fs-8); font-weight: normal; opacity: 0.9;">/ stand</span>
+                </div>
+                <p style="color: rgba(255,255,255,0.95); font-size: var(--fs-8); margin-bottom: 15px; line-height: 1.6;">
+                  Premium countertop stand with integrated NFC card for maximum visibility
+                </p>
+                <ul style="text-align: left; color: white; font-size: var(--fs-9); list-style: none; padding: 0; margin-bottom: 20px;">
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Premium stand design
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Integrated NFC card
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Countertop display
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Custom branding
+                  </li>
+                </ul>
+                <a href="products/order-nfc-cards.html" style="display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
+                  Order Now
+                </a>
+              </div>
+
+              <!-- Custom NFC -->
+              <div style="background: var(--ghost-white); border-radius: 15px; padding: 25px; text-align: center; border: 2px solid transparent; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--majorelle-blue)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateY(0)'">
+                <div style="background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                  <img src="./assets/images/NFC-custom.webp" alt="Custom NFC Card" style="width: 100%; max-width: 200px; height: auto; object-fit: contain;">
+                </div>
+                <h4 style="color: var(--raisin-black-1); margin-bottom: 10px; font-size: var(--fs-6);">Custom NFC</h4>
+                <div style="font-size: var(--fs-3); font-weight: var(--fw-700); color: var(--majorelle-blue); margin-bottom: 15px;">
+                  CAD $30
+                  <span style="font-size: var(--fs-8); font-weight: normal; color: var(--cool-gray);">/ card</span>
+                </div>
+                <p style="color: var(--cool-gray); font-size: var(--fs-8); margin-bottom: 15px; line-height: 1.6;">
+                  Fully customizable NFC card with your unique design and advanced features
+                </p>
+                <ul style="text-align: left; color: var(--slate-gray); font-size: var(--fs-9); list-style: none; padding: 0; margin-bottom: 20px;">
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Custom design
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Advanced features
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Premium materials
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Multiple links
+                  </li>
+                  <li style="padding: 5px 0; display: flex; align-items: center;">
+                    <ion-icon name="checkmark-circle" style="color: var(--majorelle-blue); margin-right: 8px; font-size: 18px;"></ion-icon>
+                    Analytics included
+                  </li>
+                </ul>
+                <a href="contact.html" style="display: inline-block; background: var(--majorelle-blue); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(98, 84, 243, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  Order Now
+                </a>
+              </div>
+
+            </div>
+
+            <ul class="product-features">
+              <li>Compatible with all modern smartphones (iOS & Android)</li>
+              <li>One-tap contact saving to customer's phone</li>
+              <li>Pre-configured Google Business Profile review link</li>
+              <li>Direct links to social media and website</li>
+              <li>Increase 5-star reviews by up to 300%</li>
+              <li>Free setup and configuration included</li>
+            </ul>
+
+            <div class="product-cta">
+              <a href="products/order-nfc-cards.html" class="btn-product btn-primary-product">Order Your Cards</a>
+              <a href="blogs/nfc-cards.html" class="btn-product btn-secondary-product">See Demo</a>
+            </div>
+          </div>
+
+          <!-- Product 5: Business VPN Service -->
+          <div class="product-card">
+            <div class="product-header">
+              <div class="product-icon cyan">
+                🔒
+              </div>
+              <div class="product-title-wrap">
+                <h3 class="h3">Business VPN Service</h3>
+                <p class="product-tagline">Secure, reliable connectivity worldwide</p>
+              </div>
+            </div>
+
+            <div class="product-pricing">
+              Monthly Subscription
+              <span class="price">CAD $10 <span class="period">/ month</span></span>
+            </div>
+
+            <p class="product-description">
+              Stay connected and secure while traveling to China or accessing restricted networks. Our premium VPN service ensures reliable access to Canadian and US networks, protects your sensitive business data, and maintains seamless communication with your team and clients, no matter where you are in the world.
+            </p>
+
+            <ul class="product-features">
+              <li>Full access to Canadian and US networks from anywhere</li>
+              <li>Multi-platform support: Mac, Windows, iOS, Android</li>
+              <li>Military-grade encryption for data security</li>
+              <li>Optimized servers for China and restricted regions</li>
+              <li>Unlimited bandwidth and high-speed connections</li>
+              <li>24/7 customer support and technical assistance</li>
+              <li>No logs policy - complete privacy protection</li>
+              <li>Easy setup with step-by-step installation guide</li>
+              <li>Connect up to 5 devices simultaneously</li>
+            </ul>
+
+            <div class="product-cta">
+              <a href="products/subscribe-vpn.html" class="btn-product btn-primary-product">Subscribe Now</a>
+              <a href="blogs/vpn.html" class="btn-product btn-secondary-product">Read More</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="section cta" aria-label="cta" style="background-image: url('./assets/images/cta-bg.jpg')">
+        <div class="container">
+          <p class="section-subtitle">Ready to Transform Your Business?</p>
+          <h2 class="h2 section-title">
+            Let's discuss which solution is <span class="has-before">perfect for you</span>
+          </h2>
+          <a href="contact.html" class="btn btn-primary has-before has-after">Schedule Free Consultation</a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">About Plansale</p>
+
+          <p class="footer-text">
+           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+          </p>
+
+
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="projects.html#website" class="footer-link">Website Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+          </li>
+
+          <li>
+            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/graphic" class="footer-link">Graphic Design</a>
+          </li>
+
+          <li>
+            <a href="projects.html/branding" class="footer-link">Branding Design</a>
+          </li>
+
+          <li>
+            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+          </li>
+
+          <li>
+            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+          </li>
+
+          <li>
+            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="services.html/SEO & GEO" class="footer-link">SEO & GEO</a>
+          </li>
+
+          <li>
+            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+          </li>
+
+          <li>
+            <a href="services.html#Funding In Business" class="footer-link">Funding In Business</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Get in Touch</p>
+          </li>
+
+          <p class="footer-text">
+
+            <strong>Tel:</strong>
+            <a href="tel:+16479472456">1 (647) 947-2456</a><br>
+
+            <strong>Email:</strong>
+            <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+
+            <strong>Address:</strong>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%2C%20Canada%20L6C%200M5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
+            </a>
+
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-redbook"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+        </ul>  
+
+ 
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2025 Plansale. All Rights Reserved by PLAN SALE CONSULTING.
+        </p>
+
+        <ul class="footer-bottom-list">
+          <li>
+            <a href="terms-and-condition.html" class="footer-bottom-link">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
+          </li>
+          <li>
+            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- CUSTOM JS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="./assets/js/script.js" defer></script
+
+  <!-- IONICON -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
