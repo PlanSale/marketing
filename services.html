@@ -151,6 +151,7 @@
       color: var(--cool-gray);
     }
 
+
     .cta-section {
       background: linear-gradient(135deg, hsl(241, 77%, 63%) 0%, hsl(267, 76%, 57%) 100%);
       padding: 80px 0;
@@ -163,11 +164,49 @@
       margin-bottom: 20px;
     }
 
-    .cta-section .cta-text {
+    .cta-text {
       color: rgba(255, 255, 255, 0.9);
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 0 auto 40px;
       font-size: var(--fs-6);
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--majorelle-blue);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-1);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--majorelle-blue);
     }
 
     .pricing-preview {
@@ -424,7 +463,7 @@
                   <span class="stat-label">Support Available</span>
                 </div>
               </div>
-
+              <br>
               <a href="projects.html" class="btn btn-primary has-before has-after">View Projects</a>
             </div>
           </div>
@@ -505,7 +544,7 @@
                   <p class="step-text">Track rankings, traffic, and continuous improvement</p>
                 </div>
               </div>
-
+                <br>
               <a href="contact.html" class="btn btn-primary has-before has-after">Get SEO Audit</a>
             </div>
           </div>
@@ -560,7 +599,7 @@
                   <strong style="color: var(--majorelle-blue);">450%</strong>
                 </div>
               </div>
-
+                <br>
               <a href="contact.html" class="btn btn-primary has-before has-after">Start Campaign</a>
             </div>
           </div>
@@ -665,32 +704,36 @@
         </div>
       </section>
 
-      <!-- CTA SECTION -->
-      <section class="cta-section" id="contact">
-        <div class="container">
-          <h2 class="h2">Ready to Transform Your Digital Presence?</h2>
-          <p class="cta-text">
-            Let's discuss how our services can help you achieve your business goals. 
-            Get a free consultation and customized strategy roadmap.
-          </p>
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <h2 class="h2">Ready to Transform Your Digital Presence?</h2>
+        <p class="cta-text">
+          Let's discuss how our services can help you achieve your business goals. Get a free consultation and customized strategy roadmap.
+        </p>
 
-          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
-            <a href="tel:+16479472456" class="btn" style="background: var(--white); color: var(--majorelle-blue); padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none;">
-              <ion-icon name="call-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
-              Call (647) 947-2456
-            </a>
-            <a href="/cdn-cgi/l/email-protection#7b12151d143b0b171a15081a171e55181a" class="btn" style="background: transparent; color: var(--white); border: 2px solid var(--white); padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none;">
-              <ion-icon name="mail-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
-              Email Us
-            </a>
-          </div>
+        <div class="cta-buttons">
+          <a href="tel:+16479472456" class="btn-outline">
+            <ion-icon name="call-outline"></ion-icon>
+            Call (647) 947-2456
+          </a>
 
-          <p style="margin-top: 40px; color: rgba(255,255,255,0.8); font-size: var(--fs-8);">
-            <ion-icon name="location-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
-            9390 Woodbine Ave, Markham, Ontario, Canada L6C 0M5
-          </p>
+          <a href="mailto:info@plansale.ca" class="btn-outline">
+            <ion-icon name="mail-outline"></ion-icon>
+            Email info@plansale.ca
+          </a>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=9390%20Woodbine%20Ave%2C%20Markham%2C%20Ontario%20L6C%200M5"
+            class="btn-outline btn-location"
+            target="_blank"
+            rel="noopener noreferrer">
+            <ion-icon name="location-outline"></ion-icon>
+            Markham, Ontario
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
     </article>
   </main>
