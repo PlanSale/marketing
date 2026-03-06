@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Get in Touch with Plansale | Toronto Digital Agency</title>
-  <meta name="description" content="Contact Plansale for web development, digital marketing, and business consulting services in Toronto. Call (647) 875-3638 or visit our Markham office.">
-  <meta name="keywords" content="contact Plansale, Toronto web agency, Markham office, business consultation, web development contact, digital marketing Toronto">
+  <title>Contact Plansale | SEO, Google Ads, PPC & Web Design in Toronto</title>
+  <meta name="description" content="Contact Plansale for SEO, Google Ads management, PPC campaigns, social media marketing, local SEO, landing pages, and website design services in Toronto and across the GTA.">
+  <meta name="keywords" content="contact Plansale, Toronto SEO agency contact, Google Ads agency Toronto, PPC management, social media marketing, local SEO, website design Toronto">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
@@ -468,7 +468,134 @@
     .error-message.show {
       display: block;
     }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .hero-badge {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: var(--white);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 1.4rem;
+      font-weight: var(--fw-700);
+      backdrop-filter: blur(6px);
+    }
+
+    .contact-note {
+      margin-top: 28px;
+      padding: 22px;
+      border-radius: var(--radius-15);
+      background: var(--ghost-white);
+    }
+
+    .contact-note .h4 {
+      margin-bottom: 10px;
+      color: var(--raisin-black-1);
+    }
+
+    .contact-note-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-note-list li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--cool-gray);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .contact-note-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #ff8000;
+      font-weight: var(--fw-700);
+    }
+
+    .contact-note-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+      font-weight: var(--fw-700);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .mini-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .mini-cta-row a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ff8000;
+      font-weight: var(--fw-700);
+      text-decoration: none;
+    }
+
+    .mini-cta-row a:hover {
+      text-decoration: underline;
+    }
+
   </style>
+
+
+  <link rel="canonical" href="https://plansale.ca/contact.html">
+
+  <meta property="og:title" content="Contact Plansale | SEO, Google Ads, PPC & Web Design in Toronto">
+  <meta property="og:description" content="Talk to Plansale about SEO, Google Ads, PPC, social media marketing, local SEO, landing pages, and web design services in Toronto and the GTA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://plansale.ca/contact.html">
+  <meta property="og:site_name" content="Plansale">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Plansale | SEO, Google Ads, PPC & Web Design in Toronto">
+  <meta name="twitter:description" content="Talk to Plansale about SEO, Google Ads, PPC, social media marketing, local SEO, landing pages, and web design services in Toronto and the GTA.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Plansale",
+    "url": "https://plansale.ca/contact.html",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Plansale",
+      "telephone": "+1-647-875-3638",
+      "email": "info@plansale.ca",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 Sheppard Ave E",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "postalCode": "M2N 5W9",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Toronto", "North York", "Markham", "Richmond Hill", "Vaughan", "Mississauga", "GTA", "Canada"],
+      "serviceType": ["SEO", "Google Ads", "PPC Management", "Social Media Marketing", "Local SEO", "Website Design", "Landing Pages", "Conversion Optimization"]
+    }
+  }
+  </script>
 
 </head>
 
@@ -524,7 +651,7 @@
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
       </button>
 
-      <a href="tel:+16478753638" class="btn btn-primary has-before has-after">Let's Talk 👋</a>
+      <a href="tel:+16478753638" class="btn btn-primary has-before has-after">Let’s Talk 👋</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -537,11 +664,20 @@
       <!-- HERO SECTION -->
       <section class="contact-hero">
         <div class="container">
-          <h1 class="h1">Get In Touch</h1>
+          <span class="section-eyebrow">Contact Plansale</span>
+          <h1 class="h1">Talk to a Toronto SEO, Google Ads & Website Growth Team</h1>
           <p class="hero-text">
-            Have a project in mind? Need expert advice? We're here to help. 
-            Reach out and let's discuss how we can transform your digital presence.
+            Planning a website refresh, local SEO campaign, Google Ads launch or social media growth strategy?
+            Tell us what you are building and we will help you map the smartest next step.
           </p>
+          <div class="hero-badges">
+            <span class="hero-badge">SEO</span>
+            <span class="hero-badge">Google Ads / PPC</span>
+            <span class="hero-badge">Social Media</span>
+            <span class="hero-badge">Local SEO</span>
+            <span class="hero-badge">Landing Pages</span>
+            <span class="hero-badge">Website Design</span>
+          </div>
         </div>
       </section>
 
@@ -553,16 +689,16 @@
             
             <!-- CONTACT INFO -->
             <div class="contact-info-card">
-              <h3 class="h3">Contact Information</h3>
-              
+              <h3 class="h3">Let’s Start with the Right Conversation</h3>
+
               <ul class="contact-info-list">
-                
+
                 <li class="contact-info-item">
                   <div class="contact-icon">
                     <ion-icon name="call-outline"></ion-icon>
                   </div>
                   <div class="contact-info-content">
-                    <h4 class="h4">Phone Number</h4>
+                    <h4 class="h4">Call Our Team</h4>
                     <p class="contact-info-text">
                       <a href="tel:+16478753638">+1 (647) 875-3638</a><br>
                       Monday - Friday: 9:00 AM - 6:00 PM<br>
@@ -576,10 +712,10 @@
                     <ion-icon name="mail-outline"></ion-icon>
                   </div>
                   <div class="contact-info-content">
-                    <h4 class="h4">Email Address</h4>
+                    <h4 class="h4">Email Us</h4>
                     <p class="contact-info-text">
-                      General Inquiries:
-                      <a href="mailto:info@plansale.ca">info@plansale.ca</a><br>
+                      Strategy, estimates and general inquiries:<br>
+                      <a href="mailto:info@plansale.ca">info@plansale.ca</a>
                     </p>
                   </div>
                 </li>
@@ -591,7 +727,7 @@
                   </div>
 
                   <div class="contact-info-content">
-                    <h4 class="h4">Office Location</h4>
+                    <h4 class="h4">Toronto Office</h4>
 
                     <p class="contact-info-text">
                       <a
@@ -599,12 +735,12 @@
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        40 Sheppard Ave E, Toronto, Ontario
+                        40 Sheppard Ave E, North York, Ontario
                       </a>
                     </p>
 
                     <p class="contact-info-text" style="margin-top:6px;">
-                      Remote service available across Canada
+                      Serving Toronto, the GTA and clients across Canada remotely.
                     </p>
                   </div>
                 </li>
@@ -613,28 +749,37 @@
               </ul>
 
               <div class="social-links">
-                <a href="#" class="social-link-btn" aria-label="Facebook">
+                <a href="https://www.facebook.com/" class="social-link-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="#" class="social-link-btn" aria-label="Instagram">
+                <a href="https://www.instagram.com/" class="social-link-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a href="#" class="social-link-btn" aria-label="YouTube">
+                <a href="https://youtube.com/" class="social-link-btn" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                   <ion-icon name="logo-youtube"></ion-icon>
                 </a>
-                <a href="#" class="social-link-btn" aria-label="Xiaohongshu">
-                  <ion-icon name="logo-xiaohongshu"></ion-icon>
-                </a>
+              </div>
 
+              <div class="contact-note">
+                <h4 class="h4">What Happens After You Submit?</h4>
+                <ul class="contact-note-list">
+                  <li>We review your goals, website, ads or current marketing setup.</li>
+                  <li>You get a response with the best next step, not a generic sales pitch.</li>
+                  <li>Best fit for local businesses, clinics, contractors, restaurants and professional services.</li>
+                </ul>
+                <div class="mini-cta-row">
+                  <a href="tel:+16478753638"><ion-icon name="call-outline"></ion-icon>Call now</a>
+                  <a href="mailto:info@plansale.ca"><ion-icon name="mail-outline"></ion-icon>Email Plansale</a>
+                </div>
               </div>
 
             </div>
 
             <!-- CONTACT FORM -->
             <div class="contact-form-card">
-              <h3 class="h3">Send Us a Message</h3>
+              <h3 class="h3">Request a Consultation</h3>
               <p class="form-subtitle">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Tell us what you need help with and we will reply with the most relevant next step for your business.
               </p>
 
               <div id="success-message" class="success-message">
@@ -725,14 +870,14 @@
                   </label>
                   <select id="service" name="service" class="form-select" required>
                     <option value="">Select a service...</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="design-creatives">Design & Creatives</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="seo-geo">SEO & GEO</option>
-                    <option value="government-funding">Government Funding Application</option>
-                    <option value="business-consulting">Business Consulting</option>
-                    <option value="nfc-products">NFC Products</option>
-                    <option value="other">Other</option>
+                    <option value="seo-services">SEO Services</option>
+                    <option value="google-ads-ppc">Google Ads / PPC Management</option>
+                    <option value="social-media-marketing">Social Media Marketing</option>
+                    <option value="local-seo-gbp">Local SEO / Google Business Profile</option>
+                    <option value="website-design">Website Design / Landing Pages</option>
+                    <option value="analytics-cro">Analytics / Conversion Optimization</option>
+                    <option value="content-strategy">Content Strategy</option>
+                    <option value="general-inquiry">General Inquiry</option>
                   </select>
                 </div>
 
@@ -742,11 +887,11 @@
                   </label>
                   <select id="budget" name="budget" class="form-select">
                     <option value="">Select budget range...</option>
-                    <option value="under-5k">Under $5,000</option>
+                    <option value="under-2k">Under $2,000</option>
+                    <option value="2k-5k">$2,000 - $5,000</option>
                     <option value="5k-10k">$5,000 - $10,000</option>
-                    <option value="10k-25k">$10,000 - $25,000</option>
-                    <option value="25k-50k">$25,000 - $50,000</option>
-                    <option value="50k-plus">$50,000+</option>
+                    <option value="10k-20k">$10,000 - $20,000</option>
+                    <option value="20k-plus">$20,000+</option>
                   </select>
                 </div>
 
@@ -758,13 +903,13 @@
                     id="message" 
                     name="message" 
                     class="form-textarea" 
-                    placeholder="Tell us about your project, goals, and timeline..."
+                    placeholder="Tell us about your business, current challenges, goals, timeline and the type of support you need..."
                     required
                   ></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">
-                  Send Message
+                  Book a Free Consultation
                 </button>
 
               </form>
@@ -794,9 +939,9 @@
         <div class="container">
           
           <div class="program-header">
-            <h2 class="h2">Visit Our Office</h2>
+            <h2 class="h2">Visit Our Toronto Office</h2>
             <p class="program-description">
-              We're located in the heart of Markham, easily accessible from Toronto and the GTA.
+              Meet in North York or work with us remotely from anywhere in Toronto, the GTA or across Canada.
             </p>
           </div>
 
@@ -868,20 +1013,20 @@
       <!-- CTA SECTION -->
       <section class="cta-section">
         <div class="container">
-          <h2 class="h2">Ready to Start Your Project?</h2>
+          <h2 class="h2">Need SEO, Google Ads, Social Media or a Better Website?</h2>
           <p class="cta-text">
-            Let's bring your vision to life. Whether you need a new website, digital marketing, 
-            or business consulting, we're here to help you succeed.
+            Whether you need more qualified leads, stronger local visibility or a cleaner website conversion path,
+            Plansale can help you build a smarter growth plan.
           </p>
 
           <div class="cta-buttons">
             <a href="tel:+16478753638" class="btn-white">
               <ion-icon name="call-outline"></ion-icon>
-              Call Now
+              Call (647) 875-3638
             </a>
-            <a href="/cdn-cgi/l/email-protection#274e49414867574b464954464b42094446" class="btn-white">
+            <a href="mailto:info@plansale.ca" class="btn-white">
               <ion-icon name="mail-outline"></ion-icon>
-              Send Email
+              Email info@plansale.ca
             </a>
           </div>
         </div>
@@ -901,7 +1046,7 @@
           <p class="footer-list-title">About Plansale</p>
 
           <p class="footer-text">
-           At Plansale, we believe great businesses deserve great presentation. We combine strategy, design, and engineering to create high-performing websites, strong search visibility (SEO/GEO), and marketing that converts. We also support physical spaces with signage, store fixtures, and renovation upgrades—helping your brand feel premium everywhere customers meet you.
+           Plansale helps businesses grow with SEO, Google Ads, PPC, social media marketing, local SEO, landing pages and conversion-focused website design. We build digital experiences that are clear, measurable and designed to generate qualified leads.
           </p>
 
 
@@ -913,31 +1058,31 @@
           </li>
 
           <li>
-            <a href="projects.html#website" class="footer-link">Website Projects</a>
+            <a href="projects.html" class="footer-link">Case Studies</a>
           </li>
 
           <li>
-            <a href="projects.html#commercial" class="footer-link">Commercial Projects</a>
+            <a href="projects.html" class="footer-link">Website & E-commerce Work</a>
           </li>
 
           <li>
-            <a href="projects.html#interior" class="footer-link">Interier Design</a>
+            <a href="projects.html" class="footer-link">SEO & Growth Projects</a>
           </li>
 
           <li>
-            <a href="projects.html#graphic" class="footer-link">Graphic Design</a>
+            <a href="services.html" class="footer-link">Digital Marketing Services</a>
           </li>
 
           <li>
-            <a href="projects.html#branding" class="footer-link">Branding Design</a>
+            <a href="contact.html" class="footer-link">Book a Consultation</a>
           </li>
 
           <li>
-            <a href="products/order-nfc-cards.html" class="footer-link">NFC Products</a>
+            <a href="funding.html" class="footer-link">Funding Support</a>
           </li>
 
           <li>
-            <a href="products/subscribe-vpn.html" class="footer-link">Subscribe VPN</a>
+            <a href="products.html" class="footer-link">Products</a>
           </li>
 
         </ul>
@@ -947,25 +1092,27 @@
             <p class="footer-list-title">Our Services</p>
           </li>
 
+          
           <li>
-            <a href="services.html#Design & Creatives" class="footer-link">Design & Creatives</a>
+            <a href="services.html#seo-services" class="footer-link">SEO Services</a>
           </li>
 
           <li>
-            <a href="services.html#WEB & MOBILE DEVELOPMENT" class="footer-link">Web Development</a>
+            <a href="services.html#google-ads-ppc" class="footer-link">Google Ads / PPC</a>
           </li>
 
           <li>
-            <a href="services.html#SEO & GEO" class="footer-link">SEO & GEO</a>
+            <a href="services.html#social-media-marketing" class="footer-link">Social Media Marketing</a>
           </li>
 
           <li>
-            <a href="services.html#SEARCH ENGINE MARKETING " class="footer-link">SEARCH ENGINE MARKETING </a>
+            <a href="services.html#local-seo-gbp" class="footer-link">Local SEO / GBP</a>
           </li>
 
           <li>
-            <a href="funding.html" class="footer-link">Funding In Business</a>
+            <a href="services.html#website-design-landing-pages" class="footer-link">Website Design / Landing Pages</a>
           </li>
+
         </ul>
 
         <ul class="footer-list">
@@ -1011,12 +1158,6 @@
               </a>
             </li>
 
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-xiaohongshu"></ion-icon>
-              </a>
-            </li>
-
           </ul>
         </ul>  
 
@@ -1038,7 +1179,7 @@
             <a href="privacy-policy.html" class="footer-bottom-link">Privacy policy</a>
           </li>
           <li>
-            <a href="contact.html" class="footer-bottom-link">Login / Signup</a>
+            <a href="contact.html" class="footer-bottom-link">Contact Plansale</a>
           </li>
         </ul>
 
