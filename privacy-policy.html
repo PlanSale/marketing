@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Plansale</title>
+  <meta name="description" content="Read Plansale's Privacy Policy to understand how we collect, use, store and protect personal information related to our website, SEO, PPC, website development and digital marketing services." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.plansale.ca/privacy-policy.html" />
+  <style>
+    :root {
+      --bg: #0e1628;
+      --bg-soft: #111d34;
+      --surface: #ffffff;
+      --surface-soft: #f4f7fb;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e1ea;
+      --primary: #1f6fff;
+      --primary-dark: #0f57d6;
+      --accent: #e8f0ff;
+      --max: 1120px;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, #f7f9fc 260px, #ffffff 700px);
+      line-height: 1.65;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--primary-dark); }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: rgba(14, 22, 40, 0.96);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1f6fff 0%, #6aa6ff 100%);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 12px 24px rgba(31, 111, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta:hover {
+      background: var(--primary-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 72px 0 30px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(14,22,40,0.96), rgba(17,29,52,0.92));
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(31,111,255,0.35) 0%, rgba(31,111,255,0) 72%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.09);
+      color: #d9e7ff;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.12;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+      max-width: 780px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      color: rgba(255,255,255,0.82);
+      font-size: 1.02rem;
+    }
+
+    .hero-meta {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-meta span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #e5eeff;
+      font-size: 0.92rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 28px;
+      padding: 22px 0 70px;
+      align-items: start;
+    }
+
+    .toc,
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .toc {
+      position: sticky;
+      top: 98px;
+      padding: 24px;
+    }
+
+    .toc h2 {
+      margin: 0 0 16px;
+      font-size: 1.08rem;
+    }
+
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface-soft);
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+    }
+
+    .toc a:hover {
+      border-color: #bfd4ff;
+      background: #eff5ff;
+    }
+
+    .content-card {
+      padding: 34px;
+    }
+
+    .intro-note,
+    .contact-box {
+      background: var(--accent);
+      border: 1px solid #cfe0ff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      color: #26415f;
+    }
+
+    .intro-note { margin-bottom: 28px; }
+    .contact-box { margin-top: 28px; }
+
+    section + section {
+      margin-top: 32px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2.section-title {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    p, li { color: var(--text); }
+    ul { padding-left: 1.2rem; }
+    li + li { margin-top: 8px; }
+    .muted { color: var(--muted); }
+
+    .footer {
+      background: #0d1527;
+      color: rgba(255,255,255,0.76);
+      padding: 34px 0;
+      margin-top: 40px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .footer a { color: #cfe0ff; }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; }
+      .nav { min-height: auto; padding: 18px 0; flex-direction: column; align-items: flex-start; }
+      .hero-card, .content-card { padding: 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 20px), var(--max)); }
+      .hero { padding-top: 34px; }
+      .hero-card, .content-card, .toc { padding: 22px; border-radius: 20px; }
+      .hero-meta { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="https://www.plansale.ca/" aria-label="Plansale Home">
+        <span class="brand-mark">P</span>
+        <span>Plansale</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://www.plansale.ca/">Home</a>
+        <a href="https://www.plansale.ca/services.html">Services</a>
+        <a href="https://www.plansale.ca/projects.html">Projects</a>
+        <a href="https://www.plansale.ca/funding.html">Funding</a>
+        <a href="https://www.plansale.ca/contact.html">Contact</a>
+        <a href="https://www.plansale.ca/privacy-policy.html" class="active">Privacy</a>
+      </nav>
+      <a class="cta" href="https://www.plansale.ca/contact.html">Let’s Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="eyebrow">Privacy & Data Handling</div>
+          <h1>Privacy Policy</h1>
+          <p>
+            This Privacy Policy explains how PLAN SALE CONSULTING ("Plansale", "we", "us" or "our") collects, uses,
+            stores and protects personal information when you visit our website, contact our team, or engage us for
+            SEO, Google Ads, PPC, Meta ads, website development, landing pages, local SEO, creative or related services.
+          </p>
+          <div class="hero-meta">
+            <span>Website + Service Inquiries</span>
+            <span>Ontario, Canada</span>
+            <span>Last updated: March 9, 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container layout">
+        <aside class="toc" aria-label="Table of contents">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#scope">1. Scope</a></li>
+            <li><a href="#collect">2. Information We Collect</a></li>
+            <li><a href="#use">3. How We Use Information</a></li>
+            <li><a href="#cookies">4. Cookies & Analytics</a></li>
+            <li><a href="#sharing">5. Sharing of Information</a></li>
+            <li><a href="#retention">6. Data Retention</a></li>
+            <li><a href="#security">7. Data Security</a></li>
+            <li><a href="#rights">8. Your Choices & Rights</a></li>
+            <li><a href="#thirdparty">9. Third-Party Platforms</a></li>
+            <li><a href="#children">10. Children's Privacy</a></li>
+            <li><a href="#updates">11. Updates</a></li>
+            <li><a href="#contact">12. Contact Us</a></li>
+          </ul>
+        </aside>
+
+        <article class="content-card">
+          <div class="intro-note">
+            We aim to collect only the information reasonably needed to respond to inquiries, deliver marketing and website services,
+            improve campaign performance, manage accounts, and maintain normal business operations.
+          </div>
+
+          <section id="scope">
+            <h2 class="section-title">1. Scope of this Privacy Policy</h2>
+            <p>
+              This policy applies to information collected through the Plansale website, contact forms, direct email, discovery calls,
+              project onboarding, client communications, and related digital marketing or website service interactions.
+            </p>
+            <p>
+              It does not automatically govern third-party websites, advertising networks, payment providers, analytics platforms,
+              social media platforms, CRMs or software tools operated by other companies, even when linked from our website or used
+              as part of campaign delivery.
+            </p>
+          </section>
+
+          <section id="collect">
+            <h2 class="section-title">2. Information We Collect</h2>
+            <p>Depending on how you interact with us, we may collect the following categories of information:</p>
+            <ul>
+              <li><strong>Contact details</strong>, such as your name, business name, email address, phone number and service inquiry details.</li>
+              <li><strong>Project information</strong>, such as business goals, location targets, website details, ad account information, budget range and campaign objectives.</li>
+              <li><strong>Technical information</strong>, such as IP address, browser type, device type, pages viewed, referring pages and approximate location data derived from analytics tools.</li>
+              <li><strong>Communication records</strong>, such as emails, submitted forms, call notes, meeting notes, proposals and project correspondence.</li>
+              <li><strong>Billing or administrative information</strong>, where needed to issue invoices, confirm services, maintain records or coordinate ongoing work.</li>
+            </ul>
+          </section>
+
+          <section id="use">
+            <h2 class="section-title">3. How We Use Information</h2>
+            <p>We may use personal information to:</p>
+            <ul>
+              <li>respond to service inquiries and schedule discovery calls or consultations;</li>
+              <li>prepare proposals, scopes, campaign recommendations and onboarding materials;</li>
+              <li>deliver SEO, PPC, website development, local SEO, content, CRO, social media or related services;</li>
+              <li>manage client relationships, reporting, support, invoicing and operational administration;</li>
+              <li>monitor website performance, traffic patterns, campaign activity and site usability;</li>
+              <li>improve our services, processes, content and marketing communications; and</li>
+              <li>comply with applicable legal, tax, accounting or regulatory obligations.</li>
+            </ul>
+          </section>
+
+          <section id="cookies">
+            <h2 class="section-title">4. Cookies, Analytics and Tracking Technologies</h2>
+            <p>
+              Our website may use cookies, pixels, analytics tags and similar technologies to understand user activity, improve website experience,
+              measure campaign effectiveness and support remarketing or advertising operations.
+            </p>
+            <p>
+              These tools may include website analytics, call tracking, advertising conversion tracking, session measurement, user behavior analysis,
+              or embedded features from third-party platforms. You can usually manage cookie settings through your browser or device settings.
+            </p>
+          </section>
+
+          <section id="sharing">
+            <h2 class="section-title">5. When We Share Information</h2>
+            <p>We do not sell personal information as part of our normal business operations. We may share information when reasonably necessary with:</p>
+            <ul>
+              <li>service providers that help us operate our website, analytics, CRM, communication, payment, hosting or reporting systems;</li>
+              <li>advertising and marketing platforms used to manage campaigns, audience targeting, conversion tracking or lead attribution;</li>
+              <li>contractors, collaborators or specialists working with us on a project under appropriate confidentiality expectations; and</li>
+              <li>legal, regulatory, tax, insurance or professional advisors where required for legitimate business or legal purposes.</li>
+            </ul>
+            <p>
+              We may also disclose information where disclosure is required by law, legal process, court order, contractual obligation,
+              or where reasonably necessary to protect our rights, users, business operations or public safety.
+            </p>
+          </section>
+
+          <section id="retention">
+            <h2 class="section-title">6. Data Retention</h2>
+            <p>
+              We retain information for as long as reasonably necessary for the purposes described in this policy, including responding to inquiries,
+              delivering services, maintaining business records, resolving disputes, enforcing agreements and meeting legal, accounting or tax obligations.
+            </p>
+            <p>
+              Retention periods may vary depending on the type of information, whether you became a client, the length of the project,
+              and applicable legal or recordkeeping requirements.
+            </p>
+          </section>
+
+          <section id="security">
+            <h2 class="section-title">7. Data Security</h2>
+            <p>
+              We take reasonable administrative, technical and organizational measures to protect information against unauthorized access,
+              loss, misuse, disclosure or alteration. However, no website, email transmission, cloud platform or digital storage method
+              can be guaranteed to be completely secure.
+            </p>
+            <p>
+              For that reason, while we work to protect your data, we cannot guarantee absolute security and you provide information at your own risk.
+            </p>
+          </section>
+
+          <section id="rights">
+            <h2 class="section-title">8. Your Choices and Rights</h2>
+            <p>You may contact us to:</p>
+            <ul>
+              <li>request access to personal information we reasonably hold about you;</li>
+              <li>request correction of inaccurate or outdated information;</li>
+              <li>ask questions about how your information is used; or</li>
+              <li>request deletion of certain information, subject to legal, contractual or operational limits.</li>
+            </ul>
+            <p>
+              We may need to verify identity before responding to certain requests. Some information may need to be retained for legal,
+              accounting, security or legitimate business reasons even after a deletion request.
+            </p>
+          </section>
+
+          <section id="thirdparty">
+            <h2 class="section-title">9. Third-Party Platforms and External Links</h2>
+            <p>
+              Plansale may work with or link to third-party platforms such as website hosts, analytics tools, ad platforms, social media tools,
+              booking or meeting software, CRMs, payment providers and government or grant-related websites. Those third parties operate under
+              their own privacy practices and terms.
+            </p>
+            <p>
+              We encourage you to review the privacy policies of any third-party services you access through links, embeds, lead forms,
+              campaign landing pages or software tools.
+            </p>
+          </section>
+
+          <section id="children">
+            <h2 class="section-title">10. Children's Privacy</h2>
+            <p>
+              Our website and services are intended for businesses, organizations and adults seeking marketing, advertising, website or growth support.
+              We do not knowingly collect personal information directly from children for our own independent purposes through this website.
+            </p>
+          </section>
+
+          <section id="updates">
+            <h2 class="section-title">11. Changes to this Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect changes in our business, services, technology, legal obligations,
+              or website practices. The updated version will be posted on this page with a revised effective date.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2 class="section-title">12. Contact Us</h2>
+            <p>
+              If you have questions about this Privacy Policy or how your information is handled, please contact us using the details below.
+            </p>
+            <div class="contact-box">
+              <strong>PLAN SALE CONSULTING</strong><br />
+              Email: <a href="mailto:info@plansale.ca">info@plansale.ca</a><br />
+              Phone: <a href="tel:+16478753638">1 (647) 875-3638</a><br />
+              Address: 40 Sheppard Ave E, Toronto, ON, Canada
+            </div>
+            <p class="muted">
+              This page is provided for general website and business use and is not legal advice. For industry-specific privacy compliance,
+              cross-border data issues, or regulated data handling requirements, legal review is recommended.
+            </p>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>© 2026 Plansale. All Rights Reserved by PLAN SALE CONSULTING.</div>
+      <div class="footer-links">
+        <a href="https://www.plansale.ca/terms-and-condition.html">Terms and Conditions</a>
+        <a href="https://www.plansale.ca/privacy-policy.html">Privacy Policy</a>
+        <a href="https://www.plansale.ca/contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

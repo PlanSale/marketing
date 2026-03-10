@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Plansale</title>
+  <meta name="description" content="The page you are looking for could not be found. Explore Plansale's SEO, PPC, website development, local SEO and digital marketing services." />
+  <meta name="robots" content="noindex, follow" />
+  <style>
+    :root {
+      --bg: #0d1527;
+      --bg-soft: #101c33;
+      --surface: rgba(255,255,255,0.08);
+      --surface-2: rgba(255,255,255,0.05);
+      --line: rgba(255,255,255,0.12);
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.72);
+      --primary: #1f6fff;
+      --primary-dark: #0f57d6;
+      --max: 1120px;
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(31,111,255,0.24), transparent 30%),
+        radial-gradient(circle at left center, rgba(90,142,255,0.16), transparent 26%),
+        linear-gradient(180deg, #0c1526 0%, #111d34 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1f6fff 0%, #6aa6ff 100%);
+      box-shadow: 0 14px 28px rgba(31, 111, 255, 0.28);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 50px 0 60px;
+    }
+
+    .card {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+    }
+
+    .left,
+    .right {
+      padding: 48px;
+    }
+
+    .left {
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.09);
+      color: #dce8ff;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    .code404 {
+      font-size: clamp(4.5rem, 11vw, 8.5rem);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    .right h2 {
+      margin: 0 0 18px;
+      font-size: 1.15rem;
+      color: #f4f7ff;
+    }
+
+    .quick-links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-links a {
+      display: block;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .quick-links a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    .quick-links strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .quick-links span {
+      color: rgba(255,255,255,0.68);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .footer {
+      padding: 22px 0 28px;
+      color: rgba(255,255,255,0.64);
+      font-size: 0.95rem;
+    }
+
+    .footer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: 1fr; }
+      .left { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 20px), var(--max)); }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .left, .right { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="https://www.plansale.ca/" aria-label="Plansale Home">
+        <span class="brand-mark">P</span>
+        <span>Plansale</span>
+      </a>
+      <nav class="nav-links" aria-label="Helpful links">
+        <a href="https://www.plansale.ca/">Home</a>
+        <a href="https://www.plansale.ca/services.html">Services</a>
+        <a href="https://www.plansale.ca/projects.html">Projects</a>
+        <a href="https://www.plansale.ca/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="card">
+        <div class="grid">
+          <div class="left">
+            <div class="badge">Error 404</div>
+            <div class="code404">404</div>
+            <h1>This page could not be found.</h1>
+            <p>
+              The link may be outdated, the page may have moved, or the URL may have been entered incorrectly.
+              You can return to the homepage, explore our service pages, or contact Plansale for help.
+            </p>
+            <div class="actions">
+              <a class="btn" href="https://www.plansale.ca/">Back to Home</a>
+              <a class="btn-secondary" href="https://www.plansale.ca/contact.html">Contact Plansale</a>
+            </div>
+          </div>
+          <aside class="right">
+            <h2>Popular pages</h2>
+            <div class="quick-links">
+              <a href="https://www.plansale.ca/services.html">
+                <strong>Digital Marketing Services</strong>
+                <span>SEO, Google Ads PPC, Meta ads, landing pages, websites and lead generation support.</span>
+              </a>
+              <a href="https://www.plansale.ca/projects.html">
+                <strong>Projects & Case Studies</strong>
+                <span>Review website, SEO, branding, commercial and creative work completed by Plansale.</span>
+              </a>
+              <a href="https://www.plansale.ca/funding.html">
+                <strong>Funding & Grants</strong>
+                <span>See funding options that may support digital transformation, websites and marketing growth.</span>
+              </a>
+              <a href="https://www.plansale.ca/contact.html">
+                <strong>Contact Us</strong>
+                <span>Reach the Plansale team to discuss your website, advertising or SEO goals in Toronto.</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>© 2026 Plansale. All Rights Reserved by PLAN SALE CONSULTING.</div>
+      <div>
+        <a href="https://www.plansale.ca/privacy-policy.html">Privacy Policy</a>
+        &nbsp;•&nbsp;
+        <a href="https://www.plansale.ca/terms-and-condition.html">Terms and Conditions</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

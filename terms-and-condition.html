@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions | Plansale</title>
+  <meta name="description" content="Read the Terms and Conditions for Plansale's website, digital marketing, website development, SEO, PPC, creative and related business services in Ontario, Canada." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.plansale.ca/terms-and-condition.html" />
+  <style>
+    :root {
+      --bg: #0e1628;
+      --bg-soft: #111d34;
+      --surface: #ffffff;
+      --surface-soft: #f4f7fb;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e1ea;
+      --primary: #1f6fff;
+      --primary-dark: #0f57d6;
+      --accent: #e8f0ff;
+      --max: 1120px;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, #f7f9fc 260px, #ffffff 700px);
+      line-height: 1.65;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--primary-dark); }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: rgba(14, 22, 40, 0.96);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1f6fff 0%, #6aa6ff 100%);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 12px 24px rgba(31, 111, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fff;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta:hover {
+      background: var(--primary-dark);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 72px 0 30px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(14,22,40,0.96), rgba(17,29,52,0.92));
+      color: #fff;
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(31,111,255,0.35) 0%, rgba(31,111,255,0) 72%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.09);
+      color: #d9e7ff;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.12;
+      margin: 0 0 16px;
+      letter-spacing: -0.03em;
+      max-width: 780px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 820px;
+      color: rgba(255,255,255,0.82);
+      font-size: 1.02rem;
+    }
+
+    .hero-meta {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-meta span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: #e5eeff;
+      font-size: 0.92rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 28px;
+      padding: 22px 0 70px;
+      align-items: start;
+    }
+
+    .toc,
+    .content-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .toc {
+      position: sticky;
+      top: 98px;
+      padding: 24px;
+    }
+
+    .toc h2 {
+      margin: 0 0 16px;
+      font-size: 1.08rem;
+    }
+
+    .toc ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--text);
+      background: var(--surface-soft);
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+    }
+
+    .toc a:hover {
+      border-color: #bfd4ff;
+      background: #eff5ff;
+    }
+
+    .content-card {
+      padding: 34px;
+    }
+
+    .intro-note {
+      background: var(--accent);
+      border: 1px solid #cfe0ff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      color: #26415f;
+      margin-bottom: 28px;
+    }
+
+    section + section {
+      margin-top: 32px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2.section-title {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    p, li {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    ul.clean {
+      margin: 14px 0 0 0;
+      padding-left: 20px;
+    }
+
+    ul.clean li + li {
+      margin-top: 10px;
+    }
+
+    .contact-box {
+      margin-top: 16px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+    }
+
+    footer {
+      background: var(--bg);
+      color: rgba(255,255,255,0.78);
+      padding: 34px 0;
+      margin-top: 16px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-grid h3 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .footer-grid p,
+    .footer-grid li,
+    .footer-grid a {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.95rem;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .copyright {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 36px;
+      }
+
+      .hero-card,
+      .content-card,
+      .toc {
+        padding: 22px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="https://www.plansale.ca/" aria-label="Plansale home">
+        <span class="brand-mark">P</span>
+        <span>Plansale</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="https://www.plansale.ca/">Home</a>
+        <a href="https://www.plansale.ca/services.html">Services</a>
+        <a href="https://www.plansale.ca/project.html">Projects</a>
+        <a href="https://www.plansale.ca/funding.html">Funding</a>
+        <a href="https://www.plansale.ca/contact.html">Contact</a>
+        <a class="active" href="https://www.plansale.ca/terms-and-condition.html">Terms</a>
+      </nav>
+      <a class="cta" href="https://www.plansale.ca/contact.html">Let’s Talk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="eyebrow">Plansale Legal</span>
+          <h1>Terms and Conditions</h1>
+          <p>
+            These Terms and Conditions govern the use of the Plansale website and the business, marketing,
+            website development, creative, SEO, PPC, social media, consulting and related services provided by
+            PLAN SALE CONSULTING in Ontario, Canada.
+          </p>
+          <div class="hero-meta">
+            <span>Effective date: March 9, 2026</span>
+            <span>Ontario, Canada</span>
+            <span>Website + Service Terms</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container layout">
+        <aside class="toc" aria-label="Table of contents">
+          <h2>On this page</h2>
+          <ul>
+            <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+            <li><a href="#services">2. Services</a></li>
+            <li><a href="#proposals">3. Proposals, Quotes and Scope</a></li>
+            <li><a href="#payments">4. Fees and Payments</a></li>
+            <li><a href="#client-responsibilities">5. Client Responsibilities</a></li>
+            <li><a href="#revisions">6. Revisions and Change Requests</a></li>
+            <li><a href="#ip">7. Intellectual Property</a></li>
+            <li><a href="#third-party">8. Third-Party Platforms</a></li>
+            <li><a href="#timelines">9. Timelines and Delivery</a></li>
+            <li><a href="#warranties">10. Disclaimers</a></li>
+            <li><a href="#liability">11. Limitation of Liability</a></li>
+            <li><a href="#termination">12. Suspension and Termination</a></li>
+            <li><a href="#law">13. Governing Law</a></li>
+            <li><a href="#contact">14. Contact Information</a></li>
+          </ul>
+        </aside>
+
+        <article class="content-card">
+          <div class="intro-note">
+            This page is a practical business terms page drafted for website and service use. It should be reviewed by a qualified lawyer before being treated as final legal advice for your business.
+          </div>
+
+          <section id="acceptance">
+            <h2 class="section-title">1. Acceptance of Terms</h2>
+            <p>
+              By accessing or using this website, contacting Plansale, requesting a quote, approving a proposal,
+              paying an invoice, or using any service offered by Plansale, you agree to be bound by these Terms and
+              Conditions. If you do not agree with these terms, please do not use this website or our services.
+            </p>
+          </section>
+
+          <section id="services">
+            <h2 class="section-title">2. Services</h2>
+            <p>
+              Plansale provides digital and business-related services that may include website design and development,
+              SEO, local SEO, Google Ads / PPC management, Meta and social media advertising, landing page design,
+              conversion optimization, branding, graphic design, consulting, grant or funding support, NFC products,
+              and related strategy or implementation services.
+            </p>
+            <p>
+              The exact services to be delivered for a client will be defined in a separate quote, proposal, invoice,
+              service agreement, email confirmation, or written scope document.
+            </p>
+          </section>
+
+          <section id="proposals">
+            <h2 class="section-title">3. Proposals, Quotes and Scope</h2>
+            <ul class="clean">
+              <li>All proposals and quotations are subject to confirmation and may be limited by a stated validity period.</li>
+              <li>Any project scope, deliverables, quantity of revisions, campaign structure, timeline, or included support must be understood based on the written scope provided by Plansale.</li>
+              <li>Items not specifically included in the approved scope are considered additional work and may be quoted separately.</li>
+              <li>Verbal discussions do not override the written scope unless later confirmed in writing by Plansale.</li>
+            </ul>
+          </section>
+
+          <section id="payments">
+            <h2 class="section-title">4. Fees and Payments</h2>
+            <ul class="clean">
+              <li>Unless otherwise stated in writing, deposits, retainers, milestone payments, or full prepayment may be required before work begins.</li>
+              <li>Invoices are due according to the payment terms shown on the invoice or proposal.</li>
+              <li>Late payments may result in project delays, suspension of services, withholding of final files, or reactivation fees where applicable.</li>
+              <li>Advertising budgets, platform fees, domain registrations, hosting fees, plugin licenses, stock assets, printing, shipping, taxes, and third-party costs are generally separate unless explicitly included.</li>
+              <li>All amounts are listed in the stated currency and are subject to applicable taxes.</li>
+            </ul>
+          </section>
+
+          <section id="client-responsibilities">
+            <h2 class="section-title">5. Client Responsibilities</h2>
+            <p>Clients are responsible for providing timely and accurate information needed for the project or service, including where relevant:</p>
+            <ul class="clean">
+              <li>Brand assets, logos, copy, product or service information, pricing, policies, images, approvals, and access credentials.</li>
+              <li>Legal compliance for their own business, including claims, disclaimers, licensing, advertising compliance, privacy obligations, accessibility requirements, and industry regulations.</li>
+              <li>Reviewing all deliverables, ad creatives, website content, campaign settings, and published materials before or promptly after launch.</li>
+            </ul>
+            <p>
+              Plansale is not responsible for delays, errors, or performance issues caused by missing information,
+              delayed approvals, inaccurate client-supplied content, or restricted account access.
+            </p>
+          </section>
+
+          <section id="revisions">
+            <h2 class="section-title">6. Revisions and Change Requests</h2>
+            <ul class="clean">
+              <li>Revision rounds are limited to what is stated in the project scope or proposal.</li>
+              <li>Requests outside the approved scope may require additional fees and timeline adjustments.</li>
+              <li>Major direction changes after approval, launch, or substantial production may be treated as a new phase of work.</li>
+            </ul>
+          </section>
+
+          <section id="ip">
+            <h2 class="section-title">7. Intellectual Property</h2>
+            <p>
+              Unless otherwise agreed in writing, Plansale retains ownership of its pre-existing methods, strategy,
+              systems, templates, code frameworks, draft concepts, internal documentation, processes, and proprietary
+              know-how. Upon full payment of approved project fees, the client will receive the rights to use the final
+              deliverables specifically created for them, subject to any third-party license restrictions.
+            </p>
+            <ul class="clean">
+              <li>Plansale may display completed work in its portfolio, marketing materials, social channels, presentations, or case studies unless the parties agree otherwise in writing.</li>
+              <li>Third-party fonts, plugins, stock photography, software, themes, and licensed assets remain subject to their original license terms.</li>
+              <li>Unpaid work, draft concepts, rejected concepts, and source files not explicitly included remain the property of Plansale.</li>
+            </ul>
+          </section>
+
+          <section id="third-party">
+            <h2 class="section-title">8. Third-Party Platforms and External Services</h2>
+            <p>
+              Plansale may work with or recommend third-party tools and platforms such as Google Ads, Meta, Google
+              Analytics, Google Search Console, hosting providers, domain registrars, CMS platforms, booking systems,
+              CRM tools, payment processors, social media platforms, and email platforms.
+            </p>
+            <ul class="clean">
+              <li>Plansale does not control third-party platform outages, policy changes, account suspensions, algorithm changes, disapprovals, data loss, or service interruptions.</li>
+              <li>Campaign results, rankings, cost-per-click, lead volume, conversion rate, reach, and platform performance cannot be guaranteed.</li>
+              <li>Clients remain responsible for complying with the terms, billing rules, and policy requirements of those third-party services.</li>
+            </ul>
+          </section>
+
+          <section id="timelines">
+            <h2 class="section-title">9. Timelines, Delivery and Performance</h2>
+            <ul class="clean">
+              <li>Any project timeline or launch estimate is an estimate only and may change based on scope, approvals, revisions, third-party dependencies, access issues, or force majeure events.</li>
+              <li>SEO, paid advertising, lead generation, social media growth, and website performance are influenced by many variables outside Plansale’s control.</li>
+              <li>Plansale will make commercially reasonable efforts to deliver services professionally, but does not guarantee rankings, sales, funding approvals, traffic levels, or specific business outcomes unless expressly guaranteed in writing.</li>
+            </ul>
+          </section>
+
+          <section id="warranties">
+            <h2 class="section-title">10. Disclaimers</h2>
+            <p>
+              This website and all Plansale services are provided on an “as is” and “as available” basis to the fullest
+              extent permitted by law. While we aim to provide accurate and helpful information, Plansale does not make
+              warranties or representations that the website will always be uninterrupted, error-free, secure, complete,
+              or suitable for every business purpose.
+            </p>
+            <p>
+              Content on this website is for general business information only and does not constitute legal, accounting,
+              tax, regulatory, investment, or professional advice.
+            </p>
+          </section>
+
+          <section id="liability">
+            <h2 class="section-title">11. Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by law, Plansale and its owners, employees, contractors, and affiliates
+              will not be liable for any indirect, incidental, special, consequential, punitive, or loss-of-profit damages,
+              or for loss of revenue, data, leads, rankings, goodwill, opportunities, or business interruption arising out
+              of or related to the use of this website or our services.
+            </p>
+            <p>
+              Where liability cannot be excluded, Plansale’s total aggregate liability for any claim related to a service
+              engagement will not exceed the total amount actually paid by the client to Plansale for the specific service
+              giving rise to the claim during the three months immediately preceding the event, unless a different cap is
+              required by law or agreed in writing.
+            </p>
+          </section>
+
+          <section id="termination">
+            <h2 class="section-title">12. Suspension and Termination</h2>
+            <ul class="clean">
+              <li>Plansale may suspend or terminate service if invoices remain unpaid, if the client breaches these terms, if abuse or unlawful conduct occurs, or if cooperation necessary to perform the work is not provided.</li>
+              <li>The client may terminate an ongoing service according to the notice period, contract term, or cancellation rules set out in the applicable service agreement or invoice.</li>
+              <li>All fees for work performed up to the termination date, including non-cancellable third-party costs, remain payable.</li>
+            </ul>
+          </section>
+
+          <section id="law">
+            <h2 class="section-title">13. Governing Law</h2>
+            <p>
+              These Terms and Conditions are governed by the laws of the Province of Ontario and the applicable federal
+              laws of Canada. Any dispute arising from these terms or from the use of Plansale’s website or services will
+              be subject to the courts located in Ontario, unless otherwise required by law.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2 class="section-title">14. Contact Information</h2>
+            <p>
+              If you have questions about these Terms and Conditions, please contact Plansale using the information below.
+            </p>
+            <div class="contact-box">
+              <strong>PLAN SALE CONSULTING</strong><br />
+              Email: <a href="mailto:info@plansale.ca">info@plansale.ca</a><br />
+              Phone: <a href="tel:+16478753638">1 (647) 875-3638</a><br />
+              Address: Toronto: 40 Sheppard Ave E, Ontario, Canada<br />
+              Website: <a href="https://www.plansale.ca/">www.plansale.ca</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>About Plansale</h3>
+          <p>
+            Plansale is a Toronto-based digital marketing agency focused on SEO, Google Ads management, PPC,
+            social media advertising, websites, landing pages and conversion-driven growth.
+          </p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://www.plansale.ca/">Home</a></li>
+            <li><a href="https://www.plansale.ca/services.html">Services</a></li>
+            <li><a href="https://www.plansale.ca/project.html">Projects</a></li>
+            <li><a href="https://www.plansale.ca/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="https://www.plansale.ca/terms-and-condition.html">Terms and Conditions</a></li>
+            <li><a href="https://www.plansale.ca/privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">© 2026 Plansale. All Rights Reserved by PLAN SALE CONSULTING.</div>
+    </div>
+  </footer>
+</body>
+</html>
